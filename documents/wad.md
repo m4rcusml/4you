@@ -90,17 +90,28 @@ Por fim, a proposta promove o empoderamento feminino, com ferramentas de autoava
 
 ### 2.1.3. Solução (sprints 1 a 5)
 
-*Explique detalhadamente os seguintes aspectos (até 60 palavras por item):*
 1. Problema a ser resolvido
-2. Dados disponíveis (mencionar fonte e conteúdo; se não houver, indicar “não se aplica”)
+A violência contra a mulher no Distrito Federal persiste como um grave desafio, marcado por resposta lenta em emergências, pouca integração dos sistemas públicos e dificuldade de acesso a informações e suporte contínuo.
+
+2. Dados disponíveis
+Serão utilizados dados públicos do IBGE, SINAN e órgãos do DF, além de integrações com ONGs e APIs institucionais, abrangendo estatísticas de violência, localização de serviços e histórico de denúncias.
+
 3. Solução proposta
+O projeto consiste em um aplicativo mobile que integra botão de emergência, formulário de avaliação de risco, chat com IA, módulos educativos, mapa da rede de proteção e dashboards em tempo real, priorizando privacidade e integração com serviços públicos.
+
 4. Forma de utilização da solução
+Usuárias acessam o app para identificar situações de risco, acionar ajuda imediata, receber suporte emocional, consultar informações, localizar serviços e acompanhar sua evolução, tudo de forma intuitiva e segura.
+
 5. Benefícios esperados
+A solução deve ampliar o acesso à rede de proteção, reduzir o tempo de resposta em emergências, promover autonomia, facilitar a autopercepção do risco e fortalecer o vínculo entre vítimas e serviços de apoio.
+
 6. Critério de sucesso e como será avaliado
+O sucesso será avaliado pelo aumento do número de mulheres atendidas, redução do tempo de resposta em emergências, engajamento nos módulos educativos, satisfação das usuárias e integração efetiva com a rede pública, monitorados por indicadores e feedbacks contínuos.
+
 
 ### 2.1.4. Value Proposition Canvas (sprint 1): 
 
-O Canvas da Proposta de Valor do aplicativo "Caminho Seguro" foi desenvolvido para alinhar profundamente as necessidades das mulheres em situação de vulnerabilidade com as soluções tecnológicas mais inovadoras e acolhedoras disponíveis atualmente. O perfil do cliente foi cuidadosamente mapeado, destacando tarefas essenciais como identificar riscos de violência, buscar apoio rápido, acessar informações confiáveis sobre direitos e medidas protetivas, compartilhar experiências e acompanhar seu progresso em autonomia e segurança. Essas tarefas refletem tanto as demandas urgentes de proteção quanto o desejo de evolução e pertencimento das usuárias.
+O Canvas da Proposta de Valor do aplicativo "Caminho Seguro" foi desenvolvido para alinhar profundamente as necessidades das mulheres em situação de vulnerabilidade com as soluções tecnológicas mais inovadoras e acolhedoras disponíveis atualmente. O perfil do cliente foi cuidadosamente mapeado, destacando tarefas essenciais como identificar riscos de violência, buscar apoio rápido, acessar informações confiáveis sobre direitos e medidas protetivas, compartilhar experiências e acompanhar seu progresso em autonomia e segurança. Essas tarefas refletem tanto as demandas urgentes de proteção quanto o desejo de evolução e pertencimento das usuárias (Figura 3).
 
 <div align = "center">
 
@@ -118,16 +129,11 @@ Os ganhos esperados pelas usuárias — autonomia, proteção, evolução, apoio
 
 No mapa de valor, os produtos e serviços oferecidos — como o app mobile, botão de emergência, chat com IA, mapa interativo, módulos educativos, dashboards e ferramentas de privacidade — são diretamente alinhados às tarefas, dores e ganhos das usuárias. A proposta de valor se diferencia pela inovação tecnológica (IA preditiva, monitoramento em tempo real), foco em segurança e privacidade, acolhimento, empoderamento e potencial de escalabilidade nacional. Assim, o "Caminho Seguro" não apenas resolve dores reais, mas também cria valor sustentável e impacto social direto, superando concorrentes ao unir tecnologia, acolhimento e integração institucional.
 
-
-### 2.1.5. Matriz de Riscos do Projeto (sprint 1)
-
-*Sem limite de palavras – usar template do curso*
-
-*Registre na matriz os riscos identificados no projeto.*
-
 ## 2.2. Personas (sprint 1)
 
-*Posicione aqui suas Personas em forma de texto markdown com imagens, ou como imagem de template preenchido. Atualize esta seção ao longo do módulo se necessário.*
+![alt text](../assets/persona-Priscila.png)
+
+![alt text](persona-mariana.png)
 
 # <a name="c3"></a>3. Projeto da Aplicação Web (sprints 1 a 4)
 
