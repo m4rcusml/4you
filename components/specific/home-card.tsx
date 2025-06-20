@@ -1,43 +1,29 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Text } from "react-native";
+import { Text, View, Image } from "react-native";
 
 export function HomeCard() {
   return (
     <Card className="relative w-72 h-44 overflow-hidden rounded-lg shadow-xs p-0">
-      <img
-        src="https://picsum.photos/304/203"
+      <Image
+        source={{ uri: "https://picsum.photos/304/203" }}
         alt="Fundo ilustrativo"
         className="absolute inset-0 w-full h-full object-cover blur-sm"
-        style={{ boxShadow: "2px 2px 2px rgba(0,0,0,0.08)" }}
+        style={{ shadowColor: "#000", shadowOpacity: 0.08, shadowRadius: 2 }}
       />
-      <div
+      <View
         className="absolute inset-0"
         style={{
-          background:
-            "linear-gradient(180deg, rgba(73,71,71,0.56) 0%, rgba(0,0,0,0.80) 100%)",
+          backgroundColor: "rgba(0,0,0,0.4)",
         }}
       />
       <CardContent className="absolute inset-0 flex flex-col justify-between p-0">
-        <div
-          className="mt-6 ml-6 font-semibold text-white text-lg leading-6 w-60"
-          style={{
-            fontFamily: "var(--font-sans)",
-          }}
-        >
+        <Text className="mt-6 ml-6 font-semibold text-white text-lg leading-6 w-60 font-sans">
           Maria da Penha
-        </div>
-        <div
-          className="ml-6 mt-2 text-white text-xs leading-5 w-60"
-          style={{
-            fontFamily: "var(--font-sans)",
-          }}
-        >
-          <Text style={{ color: "var(--light-1, #fff)", fontWeight: 400 }}>
-            Sua voz importa! Registre a ocorrência e comece a mudar sua história
-            agora.
-          </Text>
-        </div>
+        </Text>
+        <Text className="ml-6 mt-2 text-white text-xs leading-5 w-60 font-sans font-normal">
+          Sua voz importa! Registre a ocorrência e comece a mudar sua história agora.
+        </Text>
         <Button
           variant="outline"
           className="w-60 h-10 ml-6 mt-2 mb-6 rounded-md font-medium bg-transparent border-2 border-primary"
