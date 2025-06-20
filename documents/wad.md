@@ -56,9 +56,9 @@ Por fim, a proposta promove o empoderamento feminino, com ferramentas de autoava
 
 <div align = "center">
 
-<sup>Figura 1: Forças de Porter do mercado da empresa Bayer.</sup><br>
+<sup>Figura 1: Forças de Porter.</sup><br>
 
-<img src="![5 Forças de Potter](../assets/5-forcas-de-porter.png)"><br>
+<img src="![5 Forças de Porter](../assets/5-forcas-de-porter.png)"><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -76,9 +76,17 @@ Por fim, a proposta promove o empoderamento feminino, com ferramentas de autoava
 
 ### 2.1.2. Análise SWOT da Instituição Parceira (sprint 1)
 
-*Preencha com até 100 palavras – sem necessidade de fonte*
+&nbsp;&nbsp;&nbsp;&nbsp; A instituição parceira destaca-se pela inovação tecnológica, integração com a rede pública e foco em segurança e privacidade. Contudo, enfrenta desafios como dependência de dados externos, recursos limitados e alta rivalidade no setor. As oportunidades incluem expansão regional e novas tecnologias, enquanto as ameaças abrangem concorrência intensa, mudanças regulatórias e riscos de segurança digital. <br>
 
-*Apresente uma visão geral da situação do parceiro com base na matriz SWOT (forças, fraquezas, oportunidades e ameaças). Foque na relação com os concorrentes e o posicionamento da instituição.*
+<div align = "center">
+
+<sup>Figura 2: Analise Swot.</sup><br>
+
+<img src="![alt text](../assets/swot-analise.png)"><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
 
 ### 2.1.3. Solução (sprints 1 a 5)
 
