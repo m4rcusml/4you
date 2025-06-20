@@ -15,73 +15,87 @@ import { Button } from '@/components/ui/button'
 
 export default function LogIn() {
   const { signIn } = useSession()
-  const [tab, setTab] = useState('sign-in')
+  const [tab, setTab] = useState('login')
 
   return (
     <SafeAreaView className='flex-1 items-center justify-center p-6'>
       <Logo />
 
-      <View className='p-6'>
+      <View className='p-6 w-full max-w-[400px]'>
         <Tabs
           value={tab}
           onValueChange={setTab}
-          className='w-full max-w-[400px] mx-auto flex-col gap-1.5'
+          className='w-full mx-auto flex-col gap-1.5'
         >
           <TabsList className='flex-row w-full'>
-            <TabsTrigger value='account' className='flex-1'>
-              <Typography>Account</Typography>
+            <TabsTrigger value='login' className='flex-1'>
+              <Typography>Entrar</Typography>
             </TabsTrigger>
-            <TabsTrigger value='password' className='flex-1'>
-              <Typography>Password</Typography>
+            <TabsTrigger value='signup' className='flex-1'>
+              <Typography>Criar conta</Typography>
             </TabsTrigger>
           </TabsList>
-          <TabsContent value='account'>
+
+          <TabsContent value='login'>
             <Card>
               <CardHeader>
-                <CardTitle>Account</CardTitle>
+                <CardTitle>Bem vinda de volta</CardTitle>
                 <CardDescription>
-                  Make changes to your account here. Click save when you're done.
+                  Acesse sua conta para continuar
                 </CardDescription>
               </CardHeader>
+
               <CardContent className='gap-4 native:gap-2'>
                 <View className='gap-1'>
-                  <Label nativeID='name'>Name</Label>
-                  <Input aria-aria-labelledby='name' defaultValue='Pedro Duarte' />
+                  <Input aria-aria-labelledby='email' placeholder='Email' />
                 </View>
                 <View className='gap-1'>
-                  <Label nativeID='username'>Username</Label>
-                  <Input id='username' defaultValue='@peduarte' />
+                  <Input id='password' secureTextEntry aria-labelledby='password' placeholder='Senha' />
                 </View>
               </CardContent>
-              <CardFooter>
-                <Button>
-                  <Typography>Save changes</Typography>
+
+              <CardFooter className='flex-col gap-2'>
+                <Button className='w-full'>
+                  <Typography>Entrar</Typography>
                 </Button>
+                <Typography>
+                  Primeira vez aqui? <Typography className='font-semibold' onPress={() => setTab('signup')}>Criar conta</Typography>
+                </Typography>
               </CardFooter>
             </Card>
           </TabsContent>
-          <TabsContent value='password'>
+
+          <TabsContent value='signup'>
             <Card>
               <CardHeader>
-                <CardTitle>Password</CardTitle>
+                <CardTitle>Crie sua conta</CardTitle>
                 <CardDescription>
-                  Change your password here. After saving, you'll be logged out.
+                  Preencha os dados abaixo para criar sua conta
                 </CardDescription>
               </CardHeader>
+
               <CardContent className='gap-4 native:gap-2'>
                 <View className='gap-1'>
-                  <Label nativeID='current'>Current password</Label>
-                  <Input placeholder='********' aria-labelledby='current' secureTextEntry />
+                  <Input placeholder='Nome' aria-labelledby='name' />
                 </View>
                 <View className='gap-1'>
-                  <Label nativeID='new'>New password</Label>
-                  <Input placeholder='********' aria-labelledby='new' secureTextEntry />
+                  <Input placeholder='Email' aria-labelledby='email' />
+                </View>
+                <View className='gap-1'>
+                  <Input placeholder='Senha' aria-labelledby='password' secureTextEntry />
+                </View>
+                <View className='gap-1'>
+                  <Input placeholder='Confirme sua senha' aria-labelledby='password_confirm' secureTextEntry />
                 </View>
               </CardContent>
-              <CardFooter>
-                <Button>
-                  <Typography>Save password</Typography>
+
+              <CardFooter className='flex-col gap-2'>
+                <Button className='w-full'>
+                  <Typography>Continuar</Typography>
                 </Button>
+                <Typography>
+                  Já tem uma conta? <Typography className='font-semibold' onPress={() => setTab('signin')}>Entrar</Typography>
+                </Typography>
               </CardFooter>
             </Card>
           </TabsContent>
