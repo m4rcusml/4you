@@ -188,9 +188,115 @@ Além disso, a escolha tipográfica respeita os princípios de acessibilidade, g
 
 </div>
 
-## 3.4 Protótipo de alta fidelidade (sprint 3)
+## 3.4 Protótipo de alta fidelidade
 
-*posicione aqui algumas imagens demonstrativas de seu protótipo de alta fidelidade e o link para acesso ao protótipo completo (mantenha o link sempre público para visualização)*
+O protótipo de alta fidelidade éproporciona uma representação visual detalhada da aplicação. Ele simula de forma fiel o design, as interações e a experiência do usuário, utilizando cores, tipografia, ícones, botões e demais elementos gráficos compatíveis com o produto final.
+
+Esse tipo de protótipo permite validar decisões de design antes do início do desenvolvimento, testar a usabilidade com usuários reais e apresentar a solução de forma visual e funcional a stakeholders.
+
+O protótipo completo pode ser acessado através da plataforma Figma, por meio do seguinte link: [Acessar protótipo](https://www.figma.com/design/gBgPyZzconORqmgYv9R5rT/fourYOU?node-id=27-23&p=f&t=jfBAJLeckyY9Dy9L-0)
+
+A seguir estão as telas prototipadas, que ilustram as principais funcionalidades da aplicação:
+
+<div align = "center">
+
+<sup>Figura x: Telas de Introdução.</sup><br>
+
+<img src="../assets/prototype/introduction.png" /><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
+
+As telas de introdução têm como objetivo apresentar o propósito da aplicação logo no primeiro acesso da usuária. Elas destacam os pilares da plataforma — proteção, acolhimento e orientação — promovendo uma conexão emocional inicial com a proposta do sistema. Além disso, oferecem uma visão clara e objetiva sobre a utilidade e o impacto da aplicação na vida de mulheres em situação de vulnerabilidade.
+
+<div align = "center">
+
+<sup>Figura x: Telas de Login e Cadastro.</sup><br>
+
+<img src="../assets/prototype/login&cadastro.png" /><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
+
+As telas de login e cadastro são projetadas para serem intuitivas e seguras, permitindo que as usuárias acessem rapidamente suas contas ou criem novas, com foco na privacidade e proteção dos dados pessoais.
+
+<div align = "center">
+
+<sup>Figura x: Tela Home.</sup><br>
+
+<img src="../assets/prototype/home.png" /><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
+
+A tela inicial (Home) funciona como o painel principal da aplicação, permitindo o acesso direto às funcionalidades mais importantes: botão de emergência, avaliação de risco e suporte emocional. A navegação foi planejada para ser simples e acessível, com foco em clareza, legibilidade e facilidade de uso, mesmo em situações de estresse ou urgência.
+
+<div align = "center">
+
+<sup>Figura x: Tela do Mapa.</sup><br>
+
+<img src="../assets/prototype/map.png" /><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
+
+O mapa interativo utiliza geolocalização para exibir pontos da rede de apoio disponíveis nas proximidades da usuária, como delegacias especializadas, centros de referência e etc. A funcionalidade é essencial para garantir respostas rápidas e seguras em momentos críticos, otimizando o deslocamento até locais de proteção.
+
+<div align = "center">
+
+<sup>Figura x: Tela de Contatos e Comunidade.</sup><br>
+
+<img src="../assets/prototype/contacts&comunidade.png" /><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
+
+As telas apresentadas na figura x promovem a construção de uma rede de apoio. Por meio dela, as usuárias podem acessar contatos de confiança, se conectar com outras mulheres, compartilhar experiências e participar de comunidades seguras e acolhedoras. A interação social é estimulada como forma de empoderamento e fortalecimento coletivo.
+
+<div align = "center">
+
+<sup>Figura x: Telas de formulários.</sup><br>
+
+<img src="../assets/prototype/forms.png" /><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
+
+As telas de formulários são utilizados para avaliar situações de risco e coletar informações relevantes de forma rápida e objetiva. O conteúdo foi elaborado com base em instrumentos reconhecidos de avaliação de violência, garantindo embasamento técnico. As telas foram pensadas para que a usuária se sinta segura ao preenchê-las, mesmo em situações delicadas.
+
+<div align = "center">
+
+<sup>Figura x: Telas de conteúdos e chat.</sup><br>
+
+<img src="../assets/prototype/conteudos&chat.png" /><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
+
+A tela de conteúdos oferece acesso a conteúdos educativos sobre violência de gênero, direitos das mulheres e canais de apoio. Além disso, a tela chat tem integração com inteligência artificial, que é capaz de atender e orientar as usuárias 24 horas por dia. A combinação entre informação e escuta ativa visa promover acolhimento e conscientização.
+
+<div align = "center">
+
+<sup>Figura x: Telas de perfil e configurações.</sup><br>
+
+<img src="../assets/prototype/perfil&settings.png" /><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
+
+Por fim, as telas de perfil e configurações permitem que a usuária personalize sua experiência dentro da aplicação. É possível editar dados pessoais, ajustar preferências de privacidade, configurar alertas e redefinir senhas. Essa flexibilidade garante maior controle sobre o uso da plataforma e reforça a sensação de segurança individual.
+
+O protótipo de alta fidelidade da aplicação oferece uma visão abrangente da solução proposta, evidenciando sua usabilidade, coerência visual e foco no acolhimento e proteção das mulheres em situação de vulnerabilidade.
+
+Cada tela foi prototipada com base em princípios de design centrado na usuária, com especial atenção à clareza das informações e fluidez da navegação. A ferramenta não apenas apresenta funcionalidades tecnológicas, mas também reforça uma rede de apoio e empoderamento feminino por meio do design.
 
 ## 3.5. Modelagem do banco de dados (sprints 2 e 4)
 
