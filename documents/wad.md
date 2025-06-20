@@ -51,9 +51,28 @@ Por fim, a proposta promove o empoderamento feminino, com ferramentas de autoava
 
 ### 2.1.1. Modelo de 5 Forças de Porter (sprint 1)
 
-*Preencha com até 400 palavras*
+&nbsp;&nbsp;&nbsp;&nbsp; A análise das 5 Forças de Porter evidencia que o setor de aplicativos para prevenção da violência contra a mulher no Distrito Federal apresenta um ambiente altamente competitivo e dinâmico. A ameaça de novos entrantes é moderada, pois, embora o desenvolvimento técnico seja acessível, competir de fato requer inovação contínua, parcerias institucionais sólidas e credibilidade junto a órgãos públicos e usuárias. Além disso, a necessidade de aderência à legislação (LGPD) e integração com sistemas oficiais eleva as barreiras para novos concorrentes(Figura 1). <br>
 
-*Posicione aqui o modelo de 5 Forças de Porter para sustentar o contexto da indústria.*
+
+<div align = "center">
+
+<sup>Figura 1: Forças de Porter do mercado da empresa Bayer.</sup><br>
+
+<img src="![5 Forças de Potter](../assets/5-forcas-de-porter.png)"><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp; A ameaça de produtos ou serviços substitutos é elevada, já que existem diversos aplicativos concorrentes e canais tradicionais, como Ligue 180, delegacias, redes sociais e grupos de apoio presencial. A diferenciação tecnológica, como o uso de IA preditiva, integração com a rede pública e resposta em tempo real, é fundamental para mitigar essa ameaça e reter as usuárias. <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; O poder de barganha dos fornecedores é moderado, pois o aplicativo depende de dados estratégicos, serviços de nuvem e integrações institucionais. A existência de múltiplos fornecedores reduz esse poder, mas a dependência de integrações oficiais pode aumentar custos e riscos operacionais. <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; O poder de barganha dos clientes é alto, já que as usuárias possuem múltiplas opções e exigem elevados padrões de segurança, privacidade e agilidade no atendimento. A insatisfação pode levar rapidamente à migração para soluções concorrentes, tornando essencial o foco em experiência do usuário e diferenciais claros. <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Por fim, a rivalidade entre concorrentes é alta, com muitos aplicativos similares e canais tradicionais disputando a atenção das usuárias. A manutenção da relevância exige inovação tecnológica constante, engajamento ativo, campanhas educativas e integração com a comunidade e a rede pública. <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Em síntese, o contexto da indústria demanda diferenciação tecnológica, integração institucional e foco contínuo na experiência e segurança das usuárias para garantir competitividade e relevância no mercado. <br>
 
 ### 2.1.2. Análise SWOT da Instituição Parceira (sprint 1)
 
