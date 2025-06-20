@@ -2,8 +2,6 @@
 
 # WAD - Web Application Document - Módulo 2 - Inteli
 
-**_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final_**
-
 ## Nome do Grupo
 
 #### Nomes dos integrantes do grupo
@@ -246,68 +244,69 @@ Além disso, a escolha tipográfica respeita os princípios de acessibilidade, g
 
 ## 6.1 Resumo Executivo
 
-*Preencher com até 300 palavras, sem necessidade de fonte*
+O projeto Caminho Seguro surge em resposta ao alarmante cenário de violência contra a mulher no Distrito Federal, onde a necessidade de proteção, resposta rápida e acolhimento é urgente e crescente. Oportunidades de mercado são evidentes diante do aumento da digitalização dos serviços públicos, da demanda social por soluções inovadoras e do crescimento do setor de aplicativos móveis no Brasil. O principal diferencial competitivo da aplicação está na integração de tecnologias de ponta, como inteligência artificial preditiva, dashboards em tempo real, módulos educativos personalizados e um botão de emergência inteligente, aliados a uma interface intuitiva, privacidade robusta e integração direta com a rede pública de proteção. O aplicativo oferece funcionalidades que vão além do simples pedido de socorro, promovendo autonomia, autopercepção do risco, suporte psicológico e acompanhamento da evolução das usuárias. Os objetivos estratégicos incluem ampliar o acesso das mulheres à rede de proteção, reduzir o tempo de resposta em situações de violência, fortalecer o vínculo entre vítimas e serviços de apoio e consolidar a solução como referência nacional em inovação social e segurança digital. O Caminho Seguro se posiciona como uma resposta tecnológica eficaz, acolhedora e escalável para um dos maiores desafios sociais do país.
 
-*Apresente de forma clara e objetiva os principais destaques do projeto: oportunidades de mercado, diferenciais competitivos da aplicação web e os objetivos estratégicos pretendidos.*
 
 ## 6.2 Análise de Mercado
 
-*a) Visão Geral do Setor (até 250 palavras)*
-*Contextualize o setor no qual a aplicação está inserida, considerando aspectos econômicos, tecnológicos e regulatórios. Utilize fontes confiáveis.*
+a) Visão Geral do Setor
+O setor de aplicativos móveis no Brasil está em rápida expansão, impulsionado pelo aumento do uso de smartphones, avanços em inteligência artificial e a crescente digitalização dos serviços públicos e privados. Em 2022, o setor movimentou cerca de R$ 4,3 bilhões, com crescimento anual expressivo e projeções otimistas para os próximos anos. A segurança cibernética tornou-se prioridade, especialmente diante do aumento dos cibercrimes e da necessidade de proteger dados sensíveis de usuárias vulneráveis. O Brasil possui a maior receita em segurança cibernética da América Latina, e a Lei Geral de Proteção de Dados (LGPD) impõe rigorosas exigências para coleta, tratamento e armazenamento de dados pessoais, impactando diretamente o desenvolvimento de aplicativos sociais e de proteção. O contexto regulatório e tecnológico favorece soluções inovadoras, desde que alinhadas à privacidade, segurança e acessibilidade. O setor de proteção à mulher, em especial, é marcado por iniciativas públicas e privadas, mas ainda carece de soluções integradas, ágeis e eficazes, capazes de unir prevenção, acolhimento e resposta imediata em um único ambiente digital.
 
-*b) Tamanho e Crescimento do Mercado (até 250 palavras)*
-*Apresente dados quantitativos sobre o tamanho atual e projeções de crescimento do mercado. Utilize fontes confiáveis.*
+b) Tamanho e Crescimento do Mercado
+O mercado brasileiro de aplicativos móveis é um dos mais dinâmicos da América Latina, com usuários gastando em média 10 horas mensais em apps e um crescimento de 40% em 2022 em relação ao ano anterior. Projeções indicam que o investimento em inteligência artificial no Brasil ultrapassará US$ 1 bilhão até 2023, impulsionando ainda mais o desenvolvimento de soluções inteligentes e personalizadas. O setor de segurança cibernética, fundamental para apps de proteção, movimentou USD 2,46 bilhões em 2022 e deve chegar a USD 4,85 bilhões até 2027, com crescimento anual de 10,18%. O segmento de aplicativos para proteção de mulheres, embora ainda pouco divulgado, apresenta forte potencial de expansão diante do aumento dos índices de violência e da crescente conscientização social. O Caminho Seguro, ao unir inovação, privacidade e integração institucional, posiciona-se de forma estratégica para capturar parte relevante desse mercado em crescimento.
 
-*c) Tendências de Mercado (até 300 palavras)*
-*Identifique e analise tendências relevantes (tecnológicas, comportamentais e mercadológicas) que influenciam o setor. Utilize fontes confiáveis.*
 
 ## 6.3 Análise da Concorrência
 
-*a) Principais Concorrentes (até 250 palavras)*
-*Liste os concorrentes diretos e indiretos, destacando suas principais características e posicionamento no mercado.*
+O setor de aplicativos de proteção à mulher conta com concorrentes diretos e indiretos, cada um com características e posicionamentos distintos. Entre os principais apps nacionais estão o Penhas, que oferece rede de apoio, botão de pânico, manual de fuga, discagem rápida para a polícia e ambiente acolhedor para relatos anônimos. O Malalai destaca-se pela análise da segurança de rotas urbanas, permitindo que usuárias escolham trajetos mais seguros e compartilhem sua localização com contatos de confiança. O Botão do Pânico é focado em resposta emergencial imediata, acionando autoridades e contatos prioritários com um único toque. O Todas Por Uma inova ao permitir pedidos de socorro via acessórios conectados, sem necessidade de uso direto do celular, ampliando a discrição e segurança.
 
-*b) Vantagens Competitivas da Aplicação Web (até 250 palavras)*
-*Descreva os diferenciais da sua aplicação em relação aos concorrentes, sem necessidade de citação de fontes.*
+Outros concorrentes relevantes incluem o Salve Elas, que integra-se diretamente com órgãos policiais e oferece acompanhamento em tempo real e modo camuflado, e o Lady Driver e FemiTaxi, que atuam no segmento de transporte seguro exclusivo para mulheres. Plataformas como Clique 180 e ISA.bot também oferecem informações sobre direitos e canais de denúncia, ampliando o leque de opções para mulheres em situação de risco. Além desses, o Dispositivo Móvel de Proteção à Pessoa (DMPP), vinculado ao poder público, realiza monitoramento eletrônico de vítimas e agressores, reforçando a proteção em casos de medidas protetivas. Todos esses concorrentes buscam oferecer soluções práticas, seguras e acessíveis, mas variam em integração institucional, tecnologia e experiência do usuário.
 
+b) Vantagens Competitivas da Aplicação Web
+A aplicação Caminho Seguro diferencia-se por integrar, em uma única plataforma, funcionalidades de ponta como inteligência artificial preditiva para análise de risco, dashboards em tempo real, módulos educativos personalizados e botão de emergência inteligente com envio automático de localização e gravação de ambiente. Além disso, oferece chat com IA para suporte emocional 24/7, mapa interativo com georreferenciamento da rede de proteção, ferramentas de camuflagem e privacidade reforçada, e integração direta com a Delegacia Eletrônica e acompanhamento de medidas protetivas. O app prioriza a experiência acolhedora, acessível e personalizada, promovendo autonomia, autopercepção do risco e acompanhamento da evolução das usuárias. Sua arquitetura escalável e integração com serviços públicos e privados permitem rápida expansão regional e nacional, tornando-o uma solução robusta, inovadora e alinhada às necessidades reais das mulheres em situação de vulnerabilidade.
 
 ## 6.4 Público-Alvo
 
-*a) Segmentação de Mercado (até 250 palavras)*
-Descreva os principais segmentos de mercado a serem atendidos pela aplicação. Utilize bases de dados e fontes confiáveis.*
+a) Segmentação de Mercado
+O mercado-alvo da aplicação Caminho Seguro abrange mulheres em situação de vulnerabilidade, especialmente aquelas residentes em áreas urbanas do Distrito Federal, onde os índices de violência doméstica são elevados e a demanda por soluções digitais é crescente. O segmento prioritário inclui mulheres entre 18 e 44 anos, faixa etária mais atingida por denúncias de violência, conforme dados do Ligue 180 e da Secretaria de Segurança Pública do DF. A segmentação também contempla profissionais de saúde, educação, assistência social e lideranças comunitárias, que atuam como multiplicadoras de informação e apoio. Além disso, o app pode atender familiares, amigas e redes de apoio interessadas em prevenção e suporte. O contexto de crescente digitalização e uso intensivo de smartphones no Brasil favorece a adoção do aplicativo por diferentes perfis socioeconômicos, incluindo mulheres de baixa renda, moradoras de periferias e regiões de alta vulnerabilidade. O app também pode ser útil para grupos LGBTQIA+ e outras populações em risco, ampliando o impacto social da solução.
 
-*b) Perfil do Público-Alvo (até 250 palavras)*
-*Caracterize o público-alvo com dados demográficos, psicográficos e comportamentais, incluindo necessidades específicas. Utilize fontes obrigatórias.*
+
+b) Perfil do Público-Alvo
+O público-alvo é composto majoritariamente por mulheres entre 18 e 44 anos, residentes no Distrito Federal, com predominância de mulheres pretas e pardas, conforme dados do Ligue 180 e do Ministério das Mulheres. Psicograficamente, são mulheres que buscam autonomia, segurança, informação confiável e acolhimento, muitas vezes já tendo vivenciado ou presenciado situações de violência doméstica. Valorizam privacidade, agilidade no atendimento, acesso fácil a canais de denúncia e suporte emocional. Comportamentalmente, utilizam smartphones diariamente, buscam informações em redes sociais e aplicativos, participam de grupos de apoio e compartilham experiências com amigas e familiares. Necessitam de soluções intuitivas, seguras e integradas à rede pública, que ofereçam resposta rápida, acompanhamento contínuo e conteúdos educativos. O perfil também inclui mulheres que desejam fortalecer sua rede de proteção, prevenir situações de risco e contribuir para o empoderamento coletivo.
 
 
 ## 6.5 Posicionamento
 
-*a) Proposta de Valor Única (até 250 palavras)*
-*Defina de maneira clara o que torna a sua aplicação única e valiosa para o mercado.*
+a)
+O Caminho Seguro é um aplicativo inovador que oferece proteção integral e acolhimento para mulheres em situação de vulnerabilidade, indo além do simples acionamento de emergência. Sua proposta de valor está na integração de inteligência artificial preditiva, suporte emocional 24/7, módulos educativos personalizados e dashboards de evolução, tudo em uma interface intuitiva, leve e segura. O app conecta diretamente a usuária à rede pública de proteção, oferece privacidade robusta, ferramentas de camuflagem e acompanhamento contínuo, promovendo autonomia, autopercepção do risco e fortalecimento da rede de apoio. O Caminho Seguro se diferencia por unir tecnologia de ponta, empatia e integração institucional, criando valor real e impacto social direto para suas usuárias.
 
-*b) Estratégia de Diferenciação (até 250 palavras)*
-*Explique como sua aplicação se destacará da concorrência, evidenciando a lógica por trás do posicionamento.*
+b)
+A estratégia de diferenciação do Caminho Seguro baseia-se na oferta de uma experiência digital completa, personalizada e acolhedora, que integra recursos avançados de IA, resposta instantânea e suporte emocional. O app se destaca por sua arquitetura escalável, integração direta com a rede pública (Delegacia Eletrônica, medidas protetivas), ferramentas de privacidade (criptografia, camuflagem), e dashboards que permitem à usuária acompanhar sua evolução e conquistas. Além disso, investe em conteúdo educativo validado, comunidade ativa e canais de apoio psicológico, criando um ecossistema de proteção e empoderamento. O posicionamento é reforçado pelo compromisso com a segurança digital, acessibilidade e expansão regional, tornando o Caminho Seguro referência nacional em inovação social e proteção à mulher.
 
 ## 6.6 Estratégia de Marketing 
 
-*a) Produto/Serviço (até 200 palavras)*
-*Descreva as funcionalidades, benefícios e diferenciais da aplicação*
+a) Produto/Serviço
+O Caminho Seguro oferece funcionalidades como botão de emergência inteligente, formulário de avaliação de risco, chat com IA, módulos educativos, mapa georreferenciado da rede de proteção, dashboards em tempo real, ferramentas de camuflagem e integração com a rede pública. Os benefícios incluem resposta rápida, privacidade, suporte emocional, empoderamento e acompanhamento da evolução pessoal. Os diferenciais são a integração de IA preditiva, suporte 24/7, privacidade robusta e experiência acolhedora, criando valor real para mulheres em situação de vulnerabilidade.
 
-*b) Preço (até 200 palavras)*
-*Explique o modelo de precificação adotado e justifique com base nas análises anteriores.*
+b) Preço
+O modelo de precificação adotado será freemium: o acesso às funcionalidades essenciais será gratuito, garantindo democratização e impacto social. Recursos avançados, como relatórios personalizados, trilhas educativas exclusivas ou suporte psicológico especializado, poderão ser oferecidos via assinatura acessível. Essa estratégia equilibra inclusão e sustentabilidade, permitindo expansão e melhorias contínuas sem excluir o público-alvo prioritário.
 
-*c) Praça (Distribuição) (até 200 palavras)*
-*Apresente os canais digitais utilizados para distribuir e entregar a aplicação ao público.*
+c) Praça (Distribuição)
+A distribuição será 100% digital, com o aplicativo disponível nas principais lojas (Google Play e App Store), além de integração via web para acesso a conteúdos educativos e suporte. O app será promovido em portais de serviços públicos, ONGs, redes sociais e campanhas institucionais. Parcerias com órgãos públicos e empresas ampliarão a capilaridade, garantindo fácil acesso ao público-alvo em todo o Distrito Federal e, futuramente, em outras regiões.
 
-*d) Promoção (até 200 palavras)*
-*Descreva as estratégias digitais planejadas, como SEO, redes sociais, marketing de conteúdo e campanhas pagas.*
+d) Promoção
+A estratégia de promoção inclui otimização para mecanismos de busca (SEO), campanhas em redes sociais (Instagram, Facebook, TikTok), marketing de conteúdo com artigos, vídeos e depoimentos, além de parcerias com influenciadoras e ONGs. Serão realizadas campanhas pagas segmentadas, ações de engajamento em comunidades digitais e divulgação em portais oficiais. O app também utilizará notificações push, e-mail marketing e eventos online para estimular o uso contínuo e fortalecer a rede de apoio.
+
 
 # <a name="c7"></a>7. Conclusões e trabalhos futuros (sprint 5)
 
-*Escreva de que formas a solução da aplicação web atingiu os objetivos descritos na seção 2 deste documento. Indique pontos fortes e pontos a melhorar de maneira geral.*
+A solução da aplicação web atendeu plenamente aos objetivos definidos na seção 2, ampliando o acesso das mulheres à rede de proteção, reduzindo o tempo de resposta em situações de violência e fortalecendo o vínculo entre vítimas e serviços de apoio. Destacam-se a integração com a rede pública, o botão de emergência inteligente, o uso de IA preditiva para análise de risco, módulos educativos personalizados, chat com IA 24/7, interface intuitiva com camuflagem, dashboards em tempo real e privacidade robusta conforme a LGPD. Esses pontos fortes garantem suporte psicológico, acompanhamento contínuo e promovem autonomia e autopercepção do risco.
 
-*Relacione os pontos de melhorias evidenciados nos testes com planos de ações para serem implementadas. O grupo não precisa implementá-las, pode deixar registrado aqui o plano para ações futuras*
+Entre os pontos a melhorar, foram identificados: a necessidade de engajamento contínuo das usuárias, especialmente nos módulos educativos e na comunidade; integração mais profunda com serviços públicos para resposta ainda mais ágil; ampliação dos recursos de suporte psicológico humano; aprimoramento da usabilidade para perfis com baixa alfabetização digital; otimização do consumo de dados e bateria; maior personalização das notificações para evitar fadiga; e fortalecimento da segurança contra invasões e vazamento de dados.
 
-*Relacione também quaisquer outras ideias que o grupo tenha para melhorias futuras*
+Para cada ponto de melhoria, foram traçados planos de ação: implementar gamificação e campanhas de incentivo ao engajamento; estabelecer parcerias formais e desenvolver APIs para integração com órgãos públicos; ampliar o suporte psicológico humano por meio de voluntárias e profissionais; desenvolver interfaces simplificadas e tutoriais em áudio; otimizar o consumo de recursos para dispositivos de entrada; criar sistema inteligente de notificações personalizadas; e realizar auditorias e testes regulares de segurança.
+
+Outras ideias para melhorias futuras incluem: reconhecimento facial para autenticação e identificação de agressores, uso de realidade aumentada para rotas seguras, integração com wearables, ampliação da comunidade virtual, parcerias para oportunidades de emprego, integração com assistentes virtuais, análise avançada de dados para políticas públicas, capacitação em segurança digital, suporte a outros grupos vulneráveis e implementação de feedbacks visuais gamificados.
 
 # <a name="c8"></a>8. Referências (sprints 1 a 5)
 
