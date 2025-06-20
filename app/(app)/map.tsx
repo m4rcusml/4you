@@ -4,9 +4,9 @@ import { Typography } from '@/components/ui/typography'
 
 export default function Profile() {
   return (
-    <View className="flex-1 items-center justify-center">
+    <View className="p-6 pb-12">
       <Typography className="text-2xl font-bold">Mapa</Typography>
-      <Heart color='red' width={64} height={64} />
+      <Typography className="text-2xm font-medium">Mapa</Typography>
     </View>
   )
 }
