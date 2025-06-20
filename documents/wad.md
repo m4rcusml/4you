@@ -137,19 +137,15 @@ No mapa de valor, os produtos e serviços oferecidos — como o app mobile, bot�
 
 # <a name="c3"></a>3. Projeto da Aplicação Web (sprints 1 a 4)
 
-## 3.1. Arquitetura (sprints 3 e 4)
-
-*Posicione aqui o diagrama de arquitetura da sua solução de aplicação web. Atualize sempre que necessário*
-
-## 3.2. Wireframes (sprint 2)
+## 3.1. Wireframes (sprint 2)
 
 *Posicione aqui as imagens do wireframe construído para sua solução e, opcionalmente, o link para acesso (mantenha o link sempre público para visualização)*
 
-## 3.3. Guia de estilos (sprint 3)
+## 3.2. Guia de estilos (sprint 3)
 
 O guia de estilos tem como objetivo garantir consistência visual e funcional em toda a interface da aplicação. Ele atua como referência central para desenvolvedores e designers, padronizando o uso de cores e tipografias. Ao fortalecer a identidade da plataforma, o guia reduz ambiguidades na construção de interfaces e assegura acessibilidade, coerência visual e escalabilidade entre diferentes módulos da aplicação, sejam eles voltados ao público geral, à rede de apoio ou às autoridades parceiras. Seguir suas diretrizes evita o uso inadequado de estilos, promovendo uma estética unificada e acolhedora, alinhada aos valores centrais da solução: proteção, empatia, privacidade e empoderamento feminino.
 
-### 3.3.1 Cores
+### 3.3 Cores
 
 A paleta de cores é um elemento fundamental na construção visual da aplicação, pois garante que a mensagem correta seja transmitida à usuária, reforçando, de maneira sutil, os valores, o propósito e as emoções que a solução deseja despertar. No caso da aplicação, a escolha das cores foi orientada por princípios de contraste, acessibilidade e hierarquia visual, de modo a promover uma experiência intuitiva, acolhedora e segura.
 
@@ -172,7 +168,7 @@ Cada cor da paleta cumpre uma função específica — seja decorativa, informat
 
 </div>
 
-### 3.3.2 Tipografia
+### 3.3.1 Tipografia
 
 A tipografia adotada na aplicação foi escolhida com base em critérios de legibilidade, simplicidade e coerência visual. A utilização de uma única família tipográfica em toda a interface contribui para a uniformidade do design e facilita a leitura em diferentes dispositivos.
 
