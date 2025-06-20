@@ -1,25 +1,33 @@
 import '../global.css'
-import { useFonts } from 'expo-font'
+import { SessionProvider } from '@/providers/auth-provider'
 import { Stack } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
-import { useEffect } from 'react'
+import { SplashScreenController } from '@/components/ui/splash'
+import { useSession } from '@/lib/hooks/useSession'
 
 SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
-  const [loaded] = useFonts({
-    // SpaceMono: require('../assets/fonts/Inter.ttf'),
-  })
+  return (
+    <SessionProvider>
+      <SplashScreenController />
+      <RootNavigator />
+    </SessionProvider>
+  )
+}
 
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync()
-    }
-  }, [loaded])
+function RootNavigator() {
+  const { session } = useSession()
 
-  if (!loaded) {
-    return null
-  }
+  return (
+    <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: '#fff' } }}>
+      <Stack.Protected guard={!!session}>
+        <Stack.Screen name="(app)" />
+      </Stack.Protected>
 
-  return <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: '#fff' } }} />
+      <Stack.Protected guard={!session}>
+        <Stack.Screen name="(auth)" />
+      </Stack.Protected>
+    </Stack>
+  )
 }
