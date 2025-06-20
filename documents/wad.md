@@ -35,13 +35,15 @@
 
 # <a name="c1"></a>1. Introdução (sprints 1 a 5)
 
-*Preencha com até 300 palavras – sem necessidade de fonte*
+A aplicação tem como objetivo enfrentar a vulnerabilidade de mulheres em situações de risco, especialmente em casos de violência. Muitas vezes, a ajuda não chega a tempo, as informações estão dispersas e a vítima não se sente segura para denunciar. Nesse contexto, observa-se uma lacuna na detecção de perigos, na conexão com redes de apoio e na oferta de um ambiente seguro.
 
-*Contextualize aqui a problemática trazida pelo parceiro de projeto.*
+A solução proposta é uma plataforma digital multifuncional, que combina inteligência artificial e georreferenciamento com uma abordagem humanizada. O sistema identifica áreas de risco e padrões de vulnerabilidade por meio de um modelo preditivo, permitindo ações preventivas e o acionamento automático de protocolos de emergência.
 
-*Descreva brevemente a solução desenvolvida para o parceiro de negócios. Descreva os aspectos essenciais para a criação de valor do produto, com o objetivo de ajudar a entender melhor a realidade do cliente e entregar uma solução que está alinhado com o que ele espera.*
+Além disso, a aplicação possibilita a conexão inteligente com redes de suporte, como contatos de confiança, delegacias online e centros de apoio psicológico. Destaca-se o botão de emergência discreto, que envia localização em tempo real e grava áudio e vídeo, oferecendo suporte em momentos críticos.
 
-*Observe a seção 2 e verifique que ali é possível trazer mais detalhes, portanto seja objetivo aqui. Atualize esta descrição até a entrega final, conforme desenvolvimento.*
+A plataforma também se diferencia pela personalização do atendimento, com chatbot emocional e direcionamento para profissionais. Funções como o modo camuflado e a discrição visual garantem a segurança da usuária.
+
+Por fim, a proposta promove o empoderamento feminino, com ferramentas de autoavaliação de risco e espaços de compartilhamento. Assim, a aplicação atua de forma preventiva e reativa, contribuindo para a proteção, autonomia e bem-estar das mulheres.
 
 # <a name="c2"></a>2. Visão Geral da Aplicação Web (sprint 1)
 
@@ -84,22 +86,6 @@
 
 *Posicione aqui suas Personas em forma de texto markdown com imagens, ou como imagem de template preenchido. Atualize esta seção ao longo do módulo se necessário.*
 
-## 2.3. User Stories (sprints 1 a 5)
-
-*Posicione aqui a lista de User Stories levantadas para o projeto. Siga o template de User Stories e utilize a mesma referência USXX no roadmap de seu quadro Kanban. Indique todas as User Stories mapeadas, mesmo aquelas que não forem implementadas ao longo do projeto. Não se esqueça de explicar o INVEST das 5 User Stories prioritárias*
-
-*ATUALIZE ESTA SEÇÃO SEMPRE QUE ALGUMA DEMANDA MUDAR EM SEU PROJETO*
-
-*Template de User Story*
-Identificação | USXX (troque XX por numeração ordenada das User Stories)
---- | ---
-Persona | nome da Persona
-User Story | "como (papel/perfil), posso (ação/meta), para (benefício/razão)"
-Critério de aceite 1 | CR1: descrever cenário + testes de aceite
-Critério de aceite 2 | CR2: descrever cenário + testes de aceite
-Critério de aceite ... | CR...
-Critérios INVEST | *(Por que é Independente? Por que é Negociável? Por que é Valorosa? Por que é Estimável? Por que é Pequena? Por que é Testável?)*
-
 # <a name="c3"></a>3. Projeto da Aplicação Web (sprints 1 a 4)
 
 ## 3.1. Arquitetura (sprints 3 e 4)
@@ -112,21 +98,31 @@ Critérios INVEST | *(Por que é Independente? Por que é Negociável? Por que �
 
 ## 3.3. Guia de estilos (sprint 3)
 
-*Descreva aqui orientações gerais para o leitor sobre como utilizar os componentes do guia de estilos de sua solução*
+O guia de estilos tem como objetivo garantir consistência visual e funcional em toda a interface da aplicação. Ele atua como referência central para desenvolvedores e designers, padronizando o uso de cores e tipografias. Ao fortalecer a identidade da plataforma, o guia reduz ambiguidades na construção de interfaces e assegura acessibilidade, coerência visual e escalabilidade entre diferentes módulos da aplicação, sejam eles voltados ao público geral, à rede de apoio ou às autoridades parceiras. Seguir suas diretrizes evita o uso inadequado de estilos, promovendo uma estética unificada e acolhedora, alinhada aos valores centrais da solução: proteção, empatia, privacidade e empoderamento feminino.
 
 ### 3.3.1 Cores
 
-*Apresente aqui a paleta de cores, com seus códigos de aplicação e suas respectivas funções*
+A paleta de cores é um elemento fundamental na construção visual da aplicação, pois garante que a mensagem correta seja transmitida à usuária, reforçando, de maneira sutil, os valores, o propósito e as emoções que a solução deseja despertar. No caso da aplicação, a escolha das cores foi orientada por princípios de contraste, acessibilidade e hierarquia visual, de modo a promover uma experiência intuitiva, acolhedora e segura.
+
+A cor principal é um tom vibrante de rosa, que representa força, acolhimento e empatia, características essenciais para o público-alvo da plataforma. Essa cor é utilizada em elementos interativos de destaque, como botões, ícones de alerta, títulos e links importantes. Suas variações — um rosa mais escuro, um tom claro e uma versão sutil — são aplicadas conforme o nível de ênfase desejado e mantêm a coerência visual em diferentes contextos da interface.
+
+Como cor secundária, foi adotado um rosa suave, associado à autonomia, resiliência e transformação. Para garantir legibilidade e acessibilidade, os textos utilizam tons escuros sobre fundos claros, e tons claros sobre fundos escuros ou coloridos.
+
+Cada cor da paleta cumpre uma função específica — seja decorativa, informativa ou estrutural — e foi selecionada estrategicamente para reforçar a identidade do aplicativo, promovendo uma navegação clara, respeitosa e centrada no bem-estar das mulheres em situação de vulnerabilidade.
+
+<img src="../assets/Colors.png" />
 
 ### 3.3.2 Tipografia
 
-*Apresente aqui a tipografia da solução, com famílias de fontes e suas respectivas funções*
+A tipografia adotada na aplicação foi escolhida com base em critérios de legibilidade, simplicidade e coerência visual. A utilização de uma única família tipográfica em toda a interface contribui para a uniformidade do design e facilita a leitura em diferentes dispositivos.
 
-### 3.3.3 Iconografia e imagens 
+As variações de peso e estilo da fonte são aplicadas de forma estratégica para estabelecer uma hierarquia clara entre os elementos textuais. Títulos e chamadas de ação utilizam pesos mais marcantes para atrair a atenção do usuário, enquanto textos descritivos e informativos mantêm um estilo mais leve e equilibrado, promovendo uma leitura fluida e confortável.
 
-*(esta subseção é opcional, caso não existam ícones e imagens, apague esta subseção)*
+Informações secundárias, como instruções breves ou detalhes complementares, são apresentadas com pesos mais sutis, evitando sobrecarga visual. Essa abordagem permite que o conteúdo seja rapidamente interpretado, mesmo em contextos de uso sob pressão ou urgência, como é comum em situações de risco.
 
-*posicione aqui imagens e textos contendo exemplos padronizados de ícones e imagens, com seus respectivos atributos de aplicação, utilizadas na solução*
+Além disso, a escolha tipográfica respeita os princípios de acessibilidade, garantindo contraste adequado, espaçamento entre linhas e boa adaptação em diferentes tamanhos de tela. Dessa forma, reforça-se o compromisso da solução com a inclusão, o acolhimento e a experiência da usuária.
+
+<img src="../assets/Typography.png" />
 
 ## 3.4 Protótipo de alta fidelidade (sprint 3)
 
