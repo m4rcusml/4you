@@ -31,13 +31,12 @@ export default function Profile() {
           <ChevronRight width={20} height={20} color="var(--muted-foreground)" />
         </TouchableOpacity>
       </View>
-      <View className='flex-row gap-4 justify-between w-full'>
-        <HomeItem label='Conteúdos' icon={<BookOpen width={48} height={48} color="var(--primary)" />} />
-        <HomeItem label='Conteúdos' icon={<BookOpen width={48} height={48} color="var(--primary)" />} />
-        <HomeItem label='Conteúdos' icon={<BookOpen width={48} height={48} color="var(--primary)" />} />
+      <View className="flex-row gap-4 justify-between w-full">
+        <HomeItem label="Conteúdos" icon={<BookOpen width={48} height={48} color="var(--primary)" />} />
+        <HomeItem label="Conteúdos" icon={<BookOpen width={48} height={48} color="var(--primary)" />} />
+        <HomeItem label="Conteúdos" icon={<BookOpen width={48} height={48} color="var(--primary)" />} />
       </View>
-      
-      <HomeLuma></HomeLuma>
+      <HomeLuma />
     </View>
   )
 }
