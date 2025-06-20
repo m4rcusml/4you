@@ -1,5 +1,5 @@
 import '../global.css'
-import { SessionProvider } from '@/providers/auth-provider'
+import { SessionProvider } from '@/providers/session-provider'
 import { Stack } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
 import { SplashScreenController } from '@/components/ui/splash'

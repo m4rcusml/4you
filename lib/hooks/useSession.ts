@@ -1,5 +1,5 @@
 import { use } from 'react'
-import { AuthContext } from '@/providers/auth-provider'
+import { AuthContext } from '@/providers/session-provider'
 
 // This hook can be used to access the user info.
 export function useSession() {
