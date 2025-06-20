@@ -129,7 +129,18 @@ Como cor secundária, foi adotado um rosa suave, associado à autonomia, resili�
 
 Cada cor da paleta cumpre uma função específica — seja decorativa, informativa ou estrutural — e foi selecionada estrategicamente para reforçar a identidade do aplicativo, promovendo uma navegação clara, respeitosa e centrada no bem-estar das mulheres em situação de vulnerabilidade.
 
+
+<div align = "center">
+
+<sup>Figura x: Cores.</sup><br>
+
 <img src="../assets/Colors.png" />
+
+<br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
 
 ### 3.3.2 Tipografia
 
@@ -141,7 +152,15 @@ Informações secundárias, como instruções breves ou detalhes complementares,
 
 Além disso, a escolha tipográfica respeita os princípios de acessibilidade, garantindo contraste adequado, espaçamento entre linhas e boa adaptação em diferentes tamanhos de tela. Dessa forma, reforça-se o compromisso da solução com a inclusão, o acolhimento e a experiência da usuária.
 
-<img src="../assets/Typography.png" />
+<div align = "center">
+
+<sup>Figura x: Tipografia.</sup><br>
+
+<img src="../assets/Typography.png" /><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
 
 ## 3.4 Protótipo de alta fidelidade (sprint 3)
 
