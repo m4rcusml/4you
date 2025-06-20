@@ -1,5 +1,5 @@
 import { router } from 'expo-router'
-import { View } from 'react-native'
+import { Pressable, View } from 'react-native'
 
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useSession } from '@/lib/hooks/useSession'
@@ -10,7 +10,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useState } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
 
 export default function LogIn() {
@@ -27,13 +26,27 @@ export default function LogIn() {
           onValueChange={setTab}
           className='w-full mx-auto flex-col gap-1.5'
         >
-          <TabsList className='flex-row w-full'>
-            <TabsTrigger value='login' className='flex-1'>
-              <Typography>Entrar</Typography>
-            </TabsTrigger>
-            <TabsTrigger value='signup' className='flex-1'>
-              <Typography>Criar conta</Typography>
-            </TabsTrigger>
+          <TabsList className='flex-row w-full gap-2'>
+            <Pressable onPress={() => setTab('login')} className='flex-1'>
+              <View
+                className={`flex-1 items-center justify-center rounded-sm py-1 ${tab === 'login' ? 'bg-background shadow-sm' : ''
+                  }`}
+              >
+                <Typography className={tab === 'login' ? 'font-semibold' : ''}>
+                  Entrar
+                </Typography>
+              </View>
+            </Pressable>
+            <Pressable onPress={() => setTab('signup')} className='flex-1'>
+              <View
+                className={`flex-1 items-center justify-center rounded-sm py-1 ${tab === 'signup' ? 'bg-background shadow-sm' : ''
+                  }`}
+              >
+                <Typography className={tab === 'signup' ? 'font-semibold' : ''}>
+                  Criar conta
+                </Typography>
+              </View>
+            </Pressable>
           </TabsList>
 
           <TabsContent value='login'>
