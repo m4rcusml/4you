@@ -8,7 +8,7 @@ SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
   const [loaded] = useFonts({
-    // SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    // SpaceMono: require('../assets/fonts/Inter.ttf'),
   })
 
   useEffect(() => {
@@ -21,5 +21,5 @@ export default function RootLayout() {
     return null
   }
 
-  return <Stack screenOptions={{ headerShown: false }} />
+  return <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: '#fff' } }} />
 }

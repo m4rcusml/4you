@@ -1,3 +1,141 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
+
+:root {
+  --background: #ffffff;
+  --foreground: #3a3a3c;
+  --card: #ffffff;
+  --card-foreground: #3a3a3c;
+  --popover: #fff6f9;
+  --popover-foreground: #3a3a3c;
+  --primary: #e53888;
+  --primary-foreground: #ffffff;
+  --secondary: #f7a8c4;
+  --secondary-foreground: #f8fafc;
+  --muted: #fff6f9;
+  --muted-foreground: #3a3a3c;
+  --accent: #e53888;
+  --accent-foreground: #f8fafc;
+  --destructive: #ff6467;
+  --destructive-foreground: #fafafa;
+  --border: #656c6c;
+  --input: #b4b4b4;
+  --ring: #656c6c;
+  --chart-1: #91c5ff;
+  --chart-2: #3a81f6;
+  --chart-3: #2563ef;
+  --chart-4: #1a4eda;
+  --chart-5: #1f3fad;
+  --sidebar: #171717;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #1447e6;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #282828;
+  --sidebar-ring: #525252;
+  --font-sans: Inter, sans-serif;
+  --font-serif: Inter, sans-serif;
+  --font-mono: Space Mono, monospace;
+  --radius: 0.625rem;
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10);
+  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);
+  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+}
+
+.dark {
+  --background: #292929;
+  /* Um tom de preto mais profundo para o fundo geral */
+  --foreground: #e0e0e0;
+  /* Texto quase branco para alto contraste */
+
+  --card: #1e1e1e;
+  /* Fundo de cartão um pouco mais claro que o background */
+  --card-foreground: #e0e0e0;
+  /* Texto de cartão */
+
+  --popover: #242424;
+  /* Fundo de popover */
+  --popover-foreground: #e0e0e0;
+  /* Texto de popover */
+
+  --primary: #EE5FB7;
+  /* Mantido rosa */
+  --primary-foreground: #ffffff;
+  /* Mantido branco */
+
+  --secondary: #f7a8c4;
+  /* Mantido rosa claro */
+  --secondary-foreground: #f8fafc;
+  /* Mantido branco */
+
+  --muted: #2a2a2a;
+  /* Fundo mais escuro para elementos "muted" */
+  --muted-foreground: #a9a9a9;
+  /* Texto mais claro para elementos "muted" */
+
+  --accent: #EE5FB7;
+  /* Mantido rosa */
+  --accent-foreground: #121212;
+  /* Mantido branco */
+
+  --destructive: #ff6467;
+  /* Mantido vermelho */
+  --destructive-foreground: #fafafa;
+  /* Mantido branco */
+
+  --border: #797979;
+  /* Bordas mais escuras e discretas */
+  --input: #2a2a2a;
+  /* Fundo do input */
+  --ring: #797979;
+  /* Cor do anel de foco */
+
+  /* As cores dos gráficos podem ser mantidas se funcionarem bem, mas se precisar de mais contraste,
+     pode ser necessário ajustá-las levemente para serem mais vibrantes em um fundo escuro. */
+  --chart-1: #91c5ff;
+  --chart-2: #3a81f6;
+  --chart-3: #2563ef;
+  --chart-4: #1a4eda;
+  --chart-5: #1f3fad;
+
+  --sidebar: #171717;
+  /* Mantido */
+  --sidebar-foreground: #fafafa;
+  /* Mantido */
+  --sidebar-primary: #1447e6;
+  /* Mantido */
+  --sidebar-primary-foreground: #fafafa;
+  /* Mantido */
+  --sidebar-accent: #262626;
+  /* Mantido */
+  --sidebar-accent-foreground: #fafafa;
+  /* Mantido */
+  --sidebar-border: #282828;
+  /* Mantido */
+  --sidebar-ring: #525252;
+  /* Mantido */
+
+  /* Fontes e raio de borda geralmente permanecem os mesmos */
+  --font-sans: Inter, sans-serif;
+  --font-serif: Inter, sans-serif;
+  --font-mono: Space Mono, monospace;
+  --radius: 0.625rem;
+
+  /* Sombras ajustadas para serem visíveis mas sutis em um fundo escuro */
+  --shadow-2xs: 0 1px 3px 0px hsla(0, 0%, 0%, 0.15);
+  --shadow-xs: 0 1px 3px 0px hsla(0, 0%, 0%, 0.15);
+  --shadow-sm: 0 1px 3px 0px hsla(0, 0%, 0%, 0.2), 0 1px 2px -1px hsla(0, 0%, 0%, 0.2);
+  --shadow: 0 1px 3px 0px hsla(0, 0%, 0%, 0.2), 0 1px 2px -1px hsla(0, 0%, 0%, 0.2);
+  --shadow-md: 0 1px 3px 0px hsla(0, 0%, 0%, 0.2), 0 2px 4px -1px hsla(0, 0%, 0%, 0.2);
+  --shadow-lg: 0 1px 3px 0px hsla(0, 0%, 0%, 0.2), 0 4px 6px -1px hsla(0, 0%, 0%, 0.2);
+  --shadow-xl: 0 1px 3px 0px hsla(0, 0%, 0%, 0.2), 0 8px 10px -1px hsla(0, 0%, 0%, 0.2);
+  --shadow-2xl: 0 1px 3px 0px hsla(0, 0%, 0%, 0.4);
+  --shadow-inner: inset 0 2px 4px 0 hsla(0, 0%, 0%, 0.05);
+}
