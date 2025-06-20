@@ -9,7 +9,7 @@ import { Users } from '@nandorojo/heroicons/24/outline'
 import { Map } from '@nandorojo/heroicons/24/outline'
 import { Cog6Tooth } from '@nandorojo/heroicons/24/outline'
 import { PuzzlePiece } from '@nandorojo/heroicons/24/outline'
-import { colorScheme } from 'nativewind'
+import Logo from '@/assets/images/logo-white.svg'
 
 export default function TabBar({ state }: BottomTabBarProps) {
   const { bottom } = useSafeAreaInsets()
@@ -70,7 +70,7 @@ export default function TabBar({ state }: BottomTabBarProps) {
                 }}
               >
                 <View className="-rotate-45">
-                  <IconComponent width={36} height={36} color="white" />
+                  <Logo />
                 </View>
               </TouchableOpacity>
               <View className='w-12' />
