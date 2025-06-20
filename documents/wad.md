@@ -100,7 +100,23 @@ Por fim, a proposta promove o empoderamento feminino, com ferramentas de autoava
 
 ### 2.1.4. Value Proposition Canvas (sprint 1): 
 
+O Canvas da Proposta de Valor do aplicativo "Caminho Seguro" foi desenvolvido para alinhar profundamente as necessidades das mulheres em situação de vulnerabilidade com as soluções tecnológicas mais inovadoras e acolhedoras disponíveis atualmente. O perfil do cliente foi cuidadosamente mapeado, destacando tarefas essenciais como identificar riscos de violência, buscar apoio rápido, acessar informações confiáveis sobre direitos e medidas protetivas, compartilhar experiências e acompanhar seu progresso em autonomia e segurança. Essas tarefas refletem tanto as demandas urgentes de proteção quanto o desejo de evolução e pertencimento das usuárias.
 
+<div align = "center">
+
+<sup>Figura 3: Canvas Proposta de Valor .</sup><br>
+
+<img src="![assets/canvas-proposta-valor.png](../assets/canvas-proposta-valor.png)"><br>
+
+<sub>Fonte: Material produzido pelos autores (2025).</sub><br>
+
+</div>
+
+As dores identificadas incluem a dificuldade de acesso rápido à rede de proteção, falta de integração entre sistemas, resposta lenta em emergências, privacidade insuficiente, ausência de acompanhamento psicológico e sensação de isolamento. Esses pontos críticos foram endereçados com aliviadores de dor, como resposta instantânea em emergências, privacidade robusta com criptografia e camuflagem, atendimento humanizado via IA e integração de dados oficiais, facilitando o acesso a recursos psicológicos e jurídicos sem burocracia.
+
+Os ganhos esperados pelas usuárias — autonomia, proteção, evolução, apoio psicológico e pertencimento — são potencializados por criadores de ganho como o acompanhamento de progresso com dashboards, conteúdos educativos validados, comunidade ativa, trilhas personalizadas e integração com a rede pública. O aplicativo proporciona uma experiência de empoderamento, permitindo que cada mulher visualize sua evolução, conquiste autonomia e se sinta parte de uma rede de apoio acolhedora.
+
+No mapa de valor, os produtos e serviços oferecidos — como o app mobile, botão de emergência, chat com IA, mapa interativo, módulos educativos, dashboards e ferramentas de privacidade — são diretamente alinhados às tarefas, dores e ganhos das usuárias. A proposta de valor se diferencia pela inovação tecnológica (IA preditiva, monitoramento em tempo real), foco em segurança e privacidade, acolhimento, empoderamento e potencial de escalabilidade nacional. Assim, o "Caminho Seguro" não apenas resolve dores reais, mas também cria valor sustentável e impacto social direto, superando concorrentes ao unir tecnologia, acolhimento e integração institucional.
 
 
 ### 2.1.5. Matriz de Riscos do Projeto (sprint 1)
