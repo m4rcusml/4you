@@ -25,7 +25,14 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "permissions": ["ACCESS_FINE_LOCATION"]
+      "permissions": [
+        "ACCESS_FINE_LOCATION"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBq-AFO17rWZEItZu25nhRloNm2gd1bUE4"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -40,6 +47,12 @@
           "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "cfd57707-ec3f-427c-803e-efe85f17fd56"
+      }
+    }
   }
 }
