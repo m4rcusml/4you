@@ -41,21 +41,21 @@ export default function Header({ navigation, route }: Props) {
       ) : <View />}
 
       <View className="flex-row items-center">
-        <TouchableOpacity onPress={toggleColorScheme} className="p-2">
+        {Platform.OS === 'web' && <TouchableOpacity onPress={toggleColorScheme} className="p-2">
           <Moon width={24} height={24} strokeWidth={2} color="white" />
-        </TouchableOpacity>
+        </TouchableOpacity>}
 
-        <Link href="/notifications" asChild>
+        {/* <Link href="/notifications" asChild> */}
           <TouchableOpacity className="p-2 mr-2">
             <Bell width={24} height={24} strokeWidth={2} color="white" />
           </TouchableOpacity>
-        </Link>
+        {/* </Link> */}
 
-        <Link href="/profile" asChild>
+        {/* <Link href="/profile" asChild> */}
           <TouchableOpacity className="w-10 h-10 rounded-full bg-muted items-center justify-center">
             <Typography className="text-muted-foreground text-sm font-bold">CN</Typography>
           </TouchableOpacity>
-        </Link>
+        {/* </Link> */}
       </View>
     </View>
   )

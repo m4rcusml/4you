@@ -3,7 +3,7 @@ import { Textarea } from "@/components/ui/text-area"
 import { Typography } from "@/components/ui/typography"
 import { useSession } from "@/lib/hooks/useSession"
 import { usePostStore } from "@/stores/postStore"
-import { Link } from "expo-router"
+import { Link, router } from "expo-router"
 import { useState } from "react"
 import { Pressable, View } from "react-native"
 import Animated, { FadeIn, SlideInDown } from "react-native-reanimated"
@@ -27,6 +27,7 @@ export default function Page() {
     // Se não houve erro, limpa o campo de texto
     if (!usePostStore.getState().error) {
       setContent('');
+      router.back();
     }
   }
 
