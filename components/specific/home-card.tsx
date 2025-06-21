@@ -1,36 +1,44 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, useWindowDimensions } from "react-native";
 
-export function HomeCard() {
+type Props = {
+  photoURL: string
+  title: string
+  description: string
+  link: string
+  buttonLabel: string
+}
+
+export function HomeCard({ photoURL, title, description, link, buttonLabel }: Props) {
+  const { width } = useWindowDimensions()
+
   return (
-    <Card className="relative w-72 h-44 overflow-hidden rounded-lg shadow-xs p-0">
-      <Image
-        source={{ uri: "https://picsum.photos/304/203" }}
-        alt="Fundo ilustrativo"
-        className="absolute inset-0 w-full h-full object-cover blur-sm"
-        style={{ shadowColor: "#000", shadowOpacity: 0.08, shadowRadius: 2 }}
-      />
-      <View
-        className="absolute inset-0"
-        style={{
-          backgroundColor: "rgba(0,0,0,0.4)",
-        }}
-      />
-      <CardContent className="absolute inset-0 flex flex-col justify-between p-0">
-        <Text className="mt-6 ml-6 font-semibold text-white text-lg leading-6 w-60 font-sans">
-          Maria da Penha
+    <Card style={{ width: width * 0.8 }} className={`relative overflow-hidden rounded-lg shadow-xs`}>
+      <CardContent className="relative w-full flex flex-col justify-between p-6 gap-4">
+        <Image
+          source={{ uri: photoURL || 'https://picsum.photos/304/203' }}
+          alt="Fundo ilustrativo"
+          className="absolute inset-0 w-[calc(100%+24px)] h-[calc(100%-24px)] rounded-md object-cover blur-sm"
+          style={{ shadowColor: "#000", shadowOpacity: 0.08, shadowRadius: 2 }}
+        />
+        <Text className="font-semibold text-white text-lg leading-6 w-60 font-sans">
+          {title}
         </Text>
-        <Text className="ml-6 mt-2 text-white text-xs leading-5 w-60 font-sans font-normal">
-          Sua voz importa! Registre a ocorrência e comece a mudar sua história agora.
+        <Text className="text-white text-sm leading-5 font-sans font-normal">
+          {description}
         </Text>
         <Button
           variant="outline"
-          className="w-60 h-10 ml-6 mt-2 mb-6 rounded-md font-medium bg-transparent border-2 border-primary"
+          className="w-full rounded-md font-medium bg-transparent border-2 border-primary"
         >
-          <Text className="text-white">Registrar Agora</Text>
+          <Text className="text-white">
+            {buttonLabel}
+          </Text>
         </Button>
       </CardContent>
+
+      <View style={{ height: 24 }} />
     </Card>
   );
 }
