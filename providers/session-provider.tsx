@@ -1,35 +1,34 @@
 // providers/session-provider.tsx
-import { createContext, type PropsWithChildren, useEffect } from 'react'; // Importe useEffect
-import { useAuthStore } from '@/stores/authStore'; // Importe seu store Zustand
-import { User } from '@/types/user'; // Importe o tipo User
+import { createContext, type PropsWithChildren, useEffect } from 'react';
+import { useAuthStore } from '@/stores/authStore';
+import { User } from '@/types/user';
 
 export const AuthContext = createContext<{
   signIn: (email: string, password: string) => Promise<boolean>;
   signUp: (name: string, email: string, password: string) => Promise<boolean>;
   signOut: () => Promise<void>;
-  session?: string | null; // Seu token de sessão manual
-  user: User | null; // Adicione o usuário aqui
+  session?: string | null;
+  user: User | null;
   isLoading: boolean;
   error: string | null;
   clearError: () => void;
 }>({
-  signIn: async () => false, // Placeholder
-  signUp: async () => false, // Placeholder
-  signOut: async () => {}, // Placeholder
+  signIn: async () => false,
+  signUp: async () => false,
+  signOut: async () => { },
   session: null,
-  user: null, // Inicialize user como null
-  isLoading: true, // Começa como true
+  user: null,
+  isLoading: true,
   error: null,
-  clearError: () => {},
+  clearError: () => { },
 });
 
 export function SessionProvider({ children }: PropsWithChildren) {
   const { user, sessionToken, isLoading, error, signIn, signUp, signOut, initializeAuth, clearError } = useAuthStore();
 
-  // Inicia a autenticação quando o provedor é montado
   useEffect(() => {
     initializeAuth();
-  }, [initializeAuth]); // initializeAuth é uma função do store, pode ser chamada diretamente
+  }, [initializeAuth]);
 
   return (
     <AuthContext.Provider
@@ -37,7 +36,7 @@ export function SessionProvider({ children }: PropsWithChildren) {
         signIn,
         signUp,
         signOut,
-        session: sessionToken, // Mude para sessionToken
+        session: sessionToken,
         user,
         isLoading,
         error,

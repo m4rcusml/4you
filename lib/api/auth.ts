@@ -1,6 +1,5 @@
-// api/auth.ts
-import { supabase } from '@/lib/supabase' // Ajuste o caminho
-import { User } from '@/types/user' // Ajuste o caminho
+import { supabase } from '@/lib/supabase'
+import { User } from '@/types/user'
 import * as Crypto from 'expo-crypto' // Para hashing de senha no cliente (APENAS PARA DEMONSTRAÇÃO)
 // Para produção, hash de senha deve ser feito no backend (e.g., Supabase Edge Function ou seu próprio servidor)
 // import bcrypt from 'bcryptjs' // Se estivesse usando um Node.js backend
@@ -64,7 +63,7 @@ export async function loginUser(email: string, password: string): Promise<{ user
       .from('users')
       .select('*')
       .eq('email', email)
-      .eq('password_hash', password_hash) // Compara o hash da senha
+      .eq('password_hash', password_hash)
       .single()
 
     if (error) {

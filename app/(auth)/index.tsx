@@ -1,5 +1,5 @@
 import { router } from 'expo-router'
-import { Alert, Pressable, View } from 'react-native'
+import { ActivityIndicator, Alert, Pressable, View } from 'react-native'
 
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useSession } from '@/lib/hooks/useSession'
@@ -64,7 +64,7 @@ export default function LogIn() {
   if (isLoading) {
     return (
       <View className='flex-1 items-center justify-center'>
-        <Typography>Carregando...</Typography>
+        <ActivityIndicator size='large' color='#e53888' />
       </View>
     );
   }

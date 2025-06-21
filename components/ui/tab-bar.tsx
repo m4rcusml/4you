@@ -27,6 +27,10 @@ export default function TabBar({ state }: BottomTabBarProps) {
       }}
     >
       {state.routes.map((route, index) => {
+        if (!['index', 'users', 'community', 'map', 'settings'].includes(route.name)) {
+          return null
+        }
+
         const isFocused = state.index === index
         const iconColor =
           Platform.OS === 'web'

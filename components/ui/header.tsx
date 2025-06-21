@@ -3,15 +3,12 @@ import { ArrowLeft, Moon, Bell } from '@nandorojo/heroicons/24/outline'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { colorScheme, useColorScheme } from 'nativewind'
 import { Typography } from './typography'
-import { Link } from 'expo-router'
-
-import type { BottomTabNavigationOptions, BottomTabNavigationProp } from '@react-navigation/bottom-tabs'
-import type { RouteProp, ParamListBase } from '@react-navigation/native'
+import { Link, router } from 'expo-router'
 
 type Props = {
-  options: BottomTabNavigationOptions
-  route: RouteProp<ParamListBase>
-  navigation: BottomTabNavigationProp<ParamListBase, string, undefined>
+  options: any
+  route: any
+  navigation: any
 }
 
 const cantGoBackRoutes = ['index', 'users', 'community', 'map', 'settings']
@@ -38,7 +35,7 @@ export default function Header({ navigation, route }: Props) {
       }}
     >
       {canGoBack ? (
-        <TouchableOpacity className="p-2 -ml-2" onPress={() => navigation.goBack()}>
+        <TouchableOpacity className="p-2 -ml-2" onPress={() => router.back()}>
           <ArrowLeft width={24} height={24} strokeWidth={2} color="white" />
         </TouchableOpacity>
       ) : <View />}
