@@ -27,6 +27,7 @@ function RootNavigator() {
 
       <Stack.Protected guard={!session}>
         <Stack.Screen name="(auth)" />
+        {/* <Stack.Screen name="modal" options={{ presentation: 'modal' }} /> */}
       </Stack.Protected>
     </Stack>
   )

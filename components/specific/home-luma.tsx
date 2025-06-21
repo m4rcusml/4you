@@ -3,11 +3,17 @@ import { ChatBubbleOvalLeftEllipsis } from "@nandorojo/heroicons/24/outline"
 
 export function HomeLuma() {
   return (
-    <View className="w-full max-w-[350px] rounded-xl overflow-hidden shadow bg-transparent">
+    <View className="w-full max-w-[350px] rounded-xl overflow-hidden shadow bg-transparent" style={{
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.15,
+      shadowRadius: 4,
+      elevation: 4,
+    }}>
       <ImageBackground
         source={require("@/assets/images/luma-card-bg.png")}
         resizeMode="cover"
-        imageStyle={{ borderRadius: 12 }}
+        imageStyle={{ borderRadius: 12, width: "110%", height: "105%" }}
       >
         <View className="flex-1 bg-primary/90 p-4">
           <View className="flex-row justify-between items-start">
