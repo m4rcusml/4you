@@ -1,4 +1,4 @@
-import { View, StyleSheet, Platform, ScrollView } from 'react-native'
+import { View, StyleSheet, Platform, ScrollView, Modal, TouchableOpacity, Linking } from 'react-native'
 import { useEffect, useState } from 'react'
 import * as Location from 'expo-location'
 import { Typography } from '@/components/ui/typography'
@@ -19,6 +19,8 @@ export default function Profile() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [search, setSearch] = useState('') // Add search state
+  const [modalVisible, setModalVisible] = useState(false)
+  const [selectedInstitution, setSelectedInstitution] = useState<any | null>(null)
 
   useEffect(() => {
     (async () => {
@@ -87,11 +89,138 @@ export default function Profile() {
       .sort((a, b) => a._distance - b._distance)
   }
 
+  // Modal content
+  const renderModal = () => (
+    <Modal
+      visible={modalVisible}
+      animationType="slide"
+      transparent
+      onRequestClose={() => setModalVisible(false)}
+    >
+      <View style={{
+        flex: 1,
+        backgroundColor: 'rgba(0,0,0,0.3)',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+        <View style={{
+          backgroundColor: '#fff',
+          borderRadius: 16,
+          padding: 24,
+          width: '85%',
+          shadowColor: '#000',
+          shadowOpacity: 0.2,
+          shadowRadius: 8,
+          elevation: 8,
+        }}>
+          <Typography className="text-lg font-bold mb-1">
+            {selectedInstitution?.nome_localidade}
+          </Typography>
+          <Typography className="text-xm text-muted-foreground mb-2">
+            <Typography className="font-bold text-s inline">Foco principal: </Typography>
+            {selectedInstitution?.assuntos}
+          </Typography>
+          <Typography className="mb-1">
+            <Typography className="font-bold text-s inline">Endereço: </Typography>
+            {selectedInstitution?.endereco_completo}
+          </Typography>
+          {/* Telefones */}
+          {selectedInstitution?.telefones && (
+            <Typography className="mb-1">
+              <Typography className="font-bold text-s inline">Telefones: </Typography>
+              {selectedInstitution.telefones}
+            </Typography>
+          )}
+          {/* Telefone (fallback for single phone) */}
+          {selectedInstitution?.telefone && !selectedInstitution?.telefones && (
+            <Typography className="mb-1">
+              <Typography className="font-bold text-s inline">Telefone: </Typography>
+              {selectedInstitution.telefone}
+            </Typography>
+          )}
+          {/* Dias de atendimento */}
+          {selectedInstitution?.dias_atendimento && (
+            <Typography className="mb-1">
+              <Typography className="font-bold text-s inline">Dias de atendimento: </Typography>
+              {selectedInstitution.dias_atendimento}
+            </Typography>
+          )}
+          {/* Atendimento (fallback) */}
+          {selectedInstitution?.atendimento && !selectedInstitution?.dias_atendimento && (
+            <Typography className="mb-1">
+              <Typography className="font-bold text-s inline">Atendimento: </Typography>
+              {selectedInstitution.atendimento}
+            </Typography>
+          )}
+          {/* Horário de atendimento */}
+          {selectedInstitution?.horario_atendimento && (
+            <Typography className="mb-1">
+              <Typography className="font-bold text-s inline">Horário: </Typography>
+              {selectedInstitution.horario_atendimento}
+            </Typography>
+          )}
+          {/* Horário (fallback) */}
+          {selectedInstitution?.horario && !selectedInstitution?.horario_atendimento && (
+            <Typography className="mb-1">
+              <Typography className="font-bold text-s inline">Horário: </Typography>
+              {selectedInstitution.horario}
+            </Typography>
+          )}
+          {/* Público alvo */}
+          {selectedInstitution?.publico_alvo && (
+            <Typography className="mb-4">
+              <Typography className="font-bold text-s inline">Público alvo: </Typography>
+              {selectedInstitution.publico_alvo}
+            </Typography>
+          )}
+          {/* Públicos (fallback) */}
+          {selectedInstitution?.publicos && !selectedInstitution?.publico_alvo && (
+            <Typography className="mb-4">
+              <Typography className="font-bold text-s inline">Públicos: </Typography>
+              {selectedInstitution.publicos}
+            </Typography>
+          )}
+          <Button
+            className="w-full mb-2 bg-primary"
+            variant="default"
+            onPress={() => {
+              if (selectedInstitution?.endereco_completo) {
+                openInMaps(selectedInstitution.endereco_completo)
+              }
+            }}
+          >
+            <Typography className="text-primary-foreground text-xs">Rotas</Typography>
+          </Button>
+          <Button
+            className="w-full border-primary text-primary"
+            variant="outline"
+            onPress={() => setModalVisible(false)}
+          >
+            <Typography className="text-primary text-xs">Voltar</Typography>
+          </Button>
+        </View>
+      </View>
+    </Modal>
+  )
+
+  function openInMaps(address: string) {
+    const url = Platform.select({
+      ios: `http://maps.apple.com/?daddr=${encodeURIComponent(address)}`,
+      android: `geo:0,0?q=${encodeURIComponent(address)}`,
+      default: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
+    });
+    if (url) {
+      Linking.openURL(url);
+    }
+  }
+
   return (
-    <ScrollView className="p-6 mb-0" style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
-      <View>
-        <Typography className="text-2xl font-bold">Rede de apoio</Typography>
-        <Typography className="text-2xm font-medium">Seu caminho, seu controle</Typography>
+    <>
+      {renderModal()}
+      <ScrollView className="p-6 mb-0" style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
+        <View>
+          <Typography className="text-2xl font-bold">Rede de apoio</Typography>
+          <Typography className="text-2xm font-medium">Seu caminho, seu controle</Typography>
 
         <View className='mt-6 mb-6'>
           <Input
@@ -136,59 +265,71 @@ export default function Profile() {
         <Typography className="text-2xm font-medium">Encontre apoio bem perto de você.</Typography>
       </View>
 
-      <View className="w-full mt-4">
-        {loading && <Typography>Carregando instituições...</Typography>}
-        {error && <Typography className="text-red-500">{error}</Typography>}
-        {!loading && !error && filteredInstitutions.map(item => (
-          <Card
-            key={item.id}
-            className="w-full mb-4"
-            style={{
-              shadowColor: '#000',
-              shadowOffset: { width: 0, height: 2 },
-              shadowOpacity: 0.15,
-              shadowRadius: 4,
-              elevation: 4,
-              backgroundColor: '#fff',
-              borderRadius: 10,
-            }}
-          >
-            <CardHeader className="pb-2">
-              <Typography
-                className="text-lg font-semibold"
-                numberOfLines={1}
-                ellipsizeMode="tail"
-                style={{ maxWidth: '100%' }}
-              >
-                {item.nome_localidade}
-              </Typography>
-              <Typography className="text-xm text-muted-foreground mt-1">
-                <Typography className="font-bold text-s inline">Região: </Typography>
-                {item.regiao_administrativa}
-              </Typography>
-              <Typography className="text-xm text-muted-foreground mt-1">
-                <Typography className="font-bold text-s inline">Foco principal: </Typography>
-                {item.assuntos}
-              </Typography>
-            </CardHeader>
-            <CardContent className="pt-0 pb-2">
-              <Typography className="text-xm">
-                <Typography className="font-bold text-s inline">Endereço: </Typography>
-                {item.endereco_completo}
-              </Typography>
-            </CardContent>
-            <CardFooter className="pt-0">
-              <Button className="flex-1 mr-2 bg-primary" variant="default">
-                <Typography className="text-primary-foreground text-xs">Saber Mais</Typography>
-              </Button>
-              <Button className="flex-1 ml-2 border-primary text-primary" variant="outline">
-                <Typography className="text-primary text-xs">Rotas</Typography>
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </View>
-    </ScrollView>
+        <View className="w-full mt-4">
+          {loading && <Typography>Carregando instituições...</Typography>}
+          {error && <Typography className="text-red-500">{error}</Typography>}
+          {!loading && !error && filteredInstitutions.map(item => (
+            <Card
+              key={item.id}
+              className="w-full mb-4"
+              style={{
+                shadowColor: '#000',
+                shadowOffset: { width: 0, height: 2 },
+                shadowOpacity: 0.15,
+                shadowRadius: 4,
+                elevation: 4,
+                backgroundColor: '#fff',
+                borderRadius: 10,
+              }}
+            >
+              <CardHeader className="pb-2">
+                <Typography
+                  className="text-lg font-semibold"
+                  numberOfLines={1}
+                  ellipsizeMode="tail"
+                  style={{ maxWidth: '100%' }}
+                >
+                  {item.nome_localidade}
+                </Typography>
+                <Typography className="text-xm text-muted-foreground mt-1">
+                  <Typography className="font-bold text-s inline">Região: </Typography>
+                  {item.regiao_administrativa}
+                </Typography>
+                <Typography className="text-xm text-muted-foreground mt-1">
+                  <Typography className="font-bold text-s inline">Foco principal: </Typography>
+                  {item.assuntos}
+                </Typography>
+              </CardHeader>
+              <CardContent className="pt-0 pb-2">
+                <Typography className="text-xm">
+                  <Typography className="font-bold text-s inline">Endereço: </Typography>
+                  {item.endereco_completo}
+                </Typography>
+              </CardContent>
+              <CardFooter className="pt-0">
+                <Button
+                  className="flex-1 mr-2 bg-primary"
+                  variant="default"
+                  onPress={() => {
+                    setSelectedInstitution(item)
+                    setModalVisible(true)
+                  }}
+                >
+                  <Typography className="text-primary-foreground text-xs">Saber Mais</Typography>
+                </Button>
+                <Button
+                  className="flex-1 ml-2 border-primary text-primary"
+                  variant="outline"
+                  onPress={() => openInMaps(item.endereco_completo)}
+                >
+                  <Typography className="text-primary text-xs">Rotas</Typography>
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </View>
+      </ScrollView>
+    </>
   )
 }
 
