@@ -1,48 +1,43 @@
-// providers/session-provider.tsx
-import { createContext, type PropsWithChildren, useEffect } from 'react';
+import { createContext, useContext, type PropsWithChildren, useEffect } from 'react';
 import { useAuthStore } from '@/stores/authStore';
-import { User } from '@/types/user';
+import { supabase } from '@/lib/supabase';
+import { Session } from '@supabase/supabase-js';
+import { User as Profile } from '@/types/user';
 
-export const AuthContext = createContext<{
+// Definimos o tipo de dados que nosso contexto irá fornecer
+type AuthContextType = {
   signIn: (email: string, password: string) => Promise<boolean>;
   signUp: (name: string, email: string, password: string) => Promise<boolean>;
   signOut: () => Promise<void>;
-  session?: string | null;
-  user: User | null;
+  session: Session | null;
+  user: Profile | null; // Note que 'user' agora é nosso 'profile'
   isLoading: boolean;
-  error: string | null;
-  clearError: () => void;
-}>({
-  signIn: async () => false,
-  signUp: async () => false,
-  signOut: async () => { },
-  session: null,
-  user: null,
-  isLoading: true,
-  error: null,
-  clearError: () => { },
-});
+};
 
+// Criamos o contexto
+export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+// O componente Provedor
 export function SessionProvider({ children }: PropsWithChildren) {
-  const { user, sessionToken, isLoading, error, signIn, signUp, signOut, initializeAuth, clearError } = useAuthStore();
+  const { profile, session, isLoading, signIn, signUp, signOut, setAuth } = useAuthStore();
 
   useEffect(() => {
-    initializeAuth();
-  }, [initializeAuth]);
+    // Ao carregar o app, verifica a sessão imediatamente
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setAuth(session);
+    });
+
+    // O "ouvinte" mágico: reage a LOGIN, LOGOUT, etc.
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setAuth(session);
+    });
+
+    // Limpa o ouvinte quando o app é fechado para evitar vazamentos de memória
+    return () => subscription.unsubscribe();
+  }, [setAuth]);
 
   return (
-    <AuthContext.Provider
-      value={{
-        signIn,
-        signUp,
-        signOut,
-        session: sessionToken,
-        user,
-        isLoading,
-        error,
-        clearError,
-      }}
-    >
+    <AuthContext.Provider value={{ signIn, signUp, signOut, session, user: profile, isLoading }}>
       {children}
     </AuthContext.Provider>
   );

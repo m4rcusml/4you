@@ -13,7 +13,7 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 
 export default function LogIn() {
-  const { signIn, signUp, isLoading, session, error, clearError } = useSession(); // Obtenha métodos e estado do useSession
+  const { signIn, signUp, isLoading, session } = useSession(); // Obtenha métodos e estado do useSession
 
   const [tab, setTab] = useState('login');
   const [loginEmail, setLoginEmail] = useState('');
@@ -29,14 +29,6 @@ export default function LogIn() {
       router.replace('/(app)'); // Redireciona para a rota principal do app
     }
   }, [session]);
-
-  // Exibe erros
-  useEffect(() => {
-    if (error) {
-      Alert.alert('Erro de Autenticação', error);
-      clearError(); // Limpa o erro após exibição
-    }
-  }, [error, clearError]);
 
   const handleLogin = async () => {
     if (!loginEmail || !loginPassword) {
@@ -145,13 +137,13 @@ export default function LogIn() {
                   <Input className='border-[0.5px]' placeholder='Nome' aria-labelledby='name' value={registerName} onChangeText={setRegisterName} />
                 </View>
                 <View className='gap-1'>
-                  <Input className='border-[0.5px]' placeholder='Email' aria-labelledby='email' value={registerEmail} onChangeText={setRegisterEmail} />
+                  <Input className='border-[0.5px]' textContentType='emailAddress' placeholder='Email' aria-labelledby='email' value={registerEmail} onChangeText={setRegisterEmail} />
                 </View>
                 <View className='gap-1'>
-                  <Input className='border-[0.5px]' placeholder='Senha' aria-labelledby='password' value={registerPassword} onChangeText={setRegisterPassword} secureTextEntry />
+                  <Input className='border-[0.5px]' textContentType='password' placeholder='Senha' aria-labelledby='password' value={registerPassword} onChangeText={setRegisterPassword} secureTextEntry />
                 </View>
                 <View className='gap-1'>
-                  <Input className='border-[0.5px]' placeholder='Confirme sua senha' aria-labelledby='password_confirm' value={registerConfirmPassword} onChangeText={setRegisterConfirmPassword} secureTextEntry />
+                  <Input className='border-[0.5px]' textContentType='password' placeholder='Confirme sua senha' aria-labelledby='password_confirm' value={registerConfirmPassword} onChangeText={setRegisterConfirmPassword} secureTextEntry />
                 </View>
               </CardContent>
 
