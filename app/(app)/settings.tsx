@@ -3,7 +3,6 @@ import { Typography } from '@/components/ui/typography'
 import { Card, CardHeader, CardContent } from '@/components/ui/card'
 import { useColorScheme } from '@/lib/hooks/useColorScheme'
 import { useState } from 'react'
-import { cn } from '@/lib/utils'
 
 const shadowStyle = {
   shadowColor: '#000',

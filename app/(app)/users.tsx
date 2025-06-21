@@ -1,5 +1,5 @@
 import { View, ScrollView } from 'react-native'
-import { BookOpen, DocumentText } from '@nandorojo/heroicons/24/outline'
+import { BookOpen, ExclamationTriangle, UserGroup } from '@nandorojo/heroicons/24/outline'
 import { HomeCard } from '@/components/specific/home-card'
 import { HomeItem } from '@/components/specific/home-item'
 import { HomeLuma } from '@/components/specific/home-luma'
@@ -53,9 +53,9 @@ export default function Home() {
       </View>
 
       <View className="flex-row gap-4 justify-between w-full">
+        <HomeItem onPress={() => router.push('/emergencial-contacts')} label="Contatos" icon={<UserGroup width={48} height={48} color="#e53888" />} />
+        <HomeItem label="Risco" icon={<ExclamationTriangle width={48} height={48} color="#e53888" />} />
         <HomeItem onPress={() => router.push('contents/1')} label="Conteúdos" icon={<BookOpen width={48} height={48} color="#e53888" />} />
-        <HomeItem label="Precisa de ajuda?" icon={<DocumentText width={48} height={48} color="#e53888" />} />
-        <HomeItem label="Sei lá" icon={<BookOpen width={48} height={48} color="#e53888" />} />
       </View>
 
       <HomeLuma />

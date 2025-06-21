@@ -5,10 +5,10 @@ import { View, TouchableOpacity, Platform } from 'react-native'
 import { router } from 'expo-router'
 
 import { Newspaper } from '@nandorojo/heroicons/24/outline'
-import { Users } from '@nandorojo/heroicons/24/outline'
 import { Map } from '@nandorojo/heroicons/24/outline'
 import { Cog6Tooth } from '@nandorojo/heroicons/24/outline'
 import { PuzzlePiece } from '@nandorojo/heroicons/24/outline'
+import { Home } from '@nandorojo/heroicons/24/outline'
 import Logo from '@/assets/images/logo-white.svg'
 
 export default function TabBar({ state }: BottomTabBarProps) {
@@ -41,11 +41,11 @@ export default function TabBar({ state }: BottomTabBarProps) {
         const size = 28
 
         switch (route.name) {
+          case 'users':
+            IconComponent = Home
+            break
           case 'index':
             IconComponent = Newspaper
-            break
-          case 'users':
-            IconComponent = Users
             break
           case 'community':
             IconComponent = PuzzlePiece
