@@ -5,6 +5,7 @@ import { HomeItem } from '@/components/specific/home-item'
 import { HomeLuma } from '@/components/specific/home-luma'
 // @ts-ignore
 import Carousel, { Pagination } from 'react-native-x-carousel';
+import { HomeContact } from '@/components/specific/home-contact'
 
 const cards = [
   {
@@ -57,6 +58,8 @@ export default function Home() {
       </View>
 
       <HomeLuma />
+
+      <HomeContact />
     </ScrollView>
   )
 }

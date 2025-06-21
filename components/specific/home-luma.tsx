@@ -7,10 +7,8 @@ export function HomeLuma() {
       <ImageBackground
         source={require("@/assets/images/luma-card-bg.png")}
         resizeMode="cover"
-        className="w-full"
         imageStyle={{ borderRadius: 12 }}
       >
-        {/* Overlay */}
         <View className="flex-1 bg-primary/90 p-4">
           <View className="flex-row justify-between items-start">
             <View>

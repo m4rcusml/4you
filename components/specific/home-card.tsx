@@ -14,7 +14,7 @@ export function HomeCard({ photoURL, title, description, link, buttonLabel }: Pr
   const { width } = useWindowDimensions()
 
   return (
-    <Card style={{ width: width * 0.8 }} className={`relative overflow-hidden rounded-lg shadow-xs`}>
+    <Card style={{ width: width - 48 }} className={`relative overflow-hidden rounded-lg shadow-xs`}>
       <CardContent className="relative w-full flex flex-col justify-between p-6 gap-4">
         <Image
           source={{ uri: photoURL || 'https://picsum.photos/304/203' }}
