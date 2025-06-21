@@ -6,14 +6,13 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card'
 import { createClient } from '@supabase/supabase-js'
+import MapView from '@/components/general/Map'
 
 const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL!
 const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY!
 const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 export default function Profile() {
-  const MapView = Platform.OS !== 'web' ? require('react-native-maps').default : null
-  const Marker = Platform.OS !== 'web' ? require('react-native-maps').Marker : null
   const [location, setLocation] = useState<Location.LocationObject | null>(null)
   const [permissionStatus, setPermissionStatus] = useState<'granted' | 'denied' | 'undetermined'>('undetermined')
   const [institutions, setInstitutions] = useState<any[]>([])
@@ -58,9 +57,9 @@ export default function Profile() {
     const a =
       Math.sin(dLat / 2) * Math.sin(dLat / 2) +
       Math.cos(toRad(lat1)) *
-        Math.cos(toRad(lat2)) *
-        Math.sin(dLon / 2) *
-        Math.sin(dLon / 2)
+      Math.cos(toRad(lat2)) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2)
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
     return R * c
   }
@@ -105,7 +104,14 @@ export default function Profile() {
       {Platform.OS !== 'web' && MapView ? (
         <View style={styles.mapContainer}>
           <MapView
-            style={styles.map}
+            markers={filteredInstitutions.map(item => ({
+              coordinate: {
+                latitude: parseFloat(item.latitude),
+                longitude: parseFloat(item.longitude),
+              },
+              title: item.nome_localidade,
+              description: item.endereco,
+            }))}
             initialRegion={{
               latitude: location?.coords.latitude ?? -23.55052,
               longitude: location?.coords.longitude ?? -46.633308,
@@ -113,46 +119,7 @@ export default function Profile() {
               longitudeDelta: 0.0421,
             }}
             showsUserLocation={true}
-          >
-            {/* Render a marker for each institution */}
-            {filteredInstitutions.map(item =>
-              item.latitude && item.longitude ? (
-                <Marker
-                  key={item.id}
-                  coordinate={{
-                    latitude: parseFloat(item.latitude),
-                    longitude: parseFloat(item.longitude),
-                  }}
-                  title={item.nome_localidade}
-                  description={item.endereco_completo}
-                >
-                  {/* Custom pin styled with your primary color */}
-                  <View
-                    style={{
-                      backgroundColor: '#e53888', // matches --primary from global.css
-                      padding: 6,
-                      borderRadius: 16,
-                      borderWidth: 2,
-                      borderColor: '#fff',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <View
-                      style={{
-                        width: 16,
-                        height: 16,
-                        borderRadius: 8,
-                        backgroundColor: '#e53888',
-                        borderWidth: 2,
-                        borderColor: '#fff',
-                      }}
-                    />
-                  </View>
-                </Marker>
-              ) : null
-            )}
-          </MapView>
+          />
         </View>
       ) : (
         <View style={[styles.mapContainer, { alignItems: 'center', justifyContent: 'center', backgroundColor: '#eee' }]}>
@@ -233,8 +200,5 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     overflow: 'hidden',
     marginBottom: 12,
-  },
-  map: {
-    flex: 1,
-  },
+  }
 })
