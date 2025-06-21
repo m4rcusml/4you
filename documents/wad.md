@@ -298,19 +298,6 @@ O protótipo de alta fidelidade da aplicação oferece uma visão abrangente da 
 
 Cada tela foi prototipada com base em princípios de design centrado na usuária, com especial atenção à clareza das informações e fluidez da navegação. A ferramenta não apenas apresenta funcionalidades tecnológicas, mas também reforça uma rede de apoio e empoderamento feminino por meio do design.
 
-## 3.5. Modelagem do banco de dados (sprints 2 e 4)
-
-### 3.5.1. Modelo relacional (sprints 2 e 4)
-
-*posicione aqui os diagramas de modelos relacionais do seu banco de dados, apresentando todos os esquemas de tabelas e suas relações. Utilize texto para complementar suas explicações, se necessário* 
-
-## 3.6. WebAPI e endpoints (sprints 3 e 4)
-
-*Utilize um link para outra página de documentação contendo a descrição completa de cada endpoint. Ou descreva aqui cada endpoint criado para seu sistema.* 
-
-*Cada endpoint deve conter endereço, método (GET, POST, PUT, PATCH, DELETE), header, body e formatos de response*
-
-
 # <a name="c6"></a>4. Estudo de Mercado e Plano de Marketing 
 
 ## 4.1 Resumo Executivo
