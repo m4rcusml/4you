@@ -12,15 +12,24 @@ export function HomeItem({ label, icon, className }: HomeItemProps) {
   return (
     <Card
       className={cn(
-        "flex-1 p-4 items-center justify-center gap-2 rounded-xl shadow-md bg-card hover:shadow-lg transition-shadow",
+        "flex-1 p-4 items-center justify-center gap-2 rounded-xl bg-card hover:shadow-lg",
         className
       )}
+      style={{
+        // React Native shadow for iOS
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.15,
+        shadowRadius: 4,
+        // React Native elevation for Android
+        elevation: 4,
+      }}
     >
       <CardContent className="flex flex-col items-center justify-center p-0">
         <View className="w-12 h-12 items-center justify-center mb-2">
           {icon}
         </View>
-        <Text className="text-sm font-medium text-foreground">{label}</Text>
+        <Text className="text-sm text-center font-medium text-foreground">{label}</Text>
       </CardContent>
     </Card>
   );

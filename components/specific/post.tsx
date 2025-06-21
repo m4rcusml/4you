@@ -22,14 +22,14 @@ export function Post({ data }: Props) {
 
       <View className="flex-row gap-4">
         <View className="flex-row items-center gap-1">
-          <ChatIcon width={24} height={24} color="var(--secondary)" />
+          <ChatIcon width={24} height={24} color="#f7a8c4" />
           <Typography className="text-secondary">
             {data.comments || 0}
           </Typography>
         </View>
 
         <View className="flex-row items-center gap-1">
-          <HeartIcon width={24} height={24} color="var(--secondary)" />
+          <HeartIcon width={24} height={24} color="#f7a8c4" />
           <Typography className="text-secondary">
             {data.likes || 0}
           </Typography>
