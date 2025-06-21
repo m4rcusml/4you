@@ -1,8 +1,11 @@
-## Nome do Grupo
+## 4YOU - Aplicativo Luma
 
 #### Nomes dos integrantes do grupo
 
-
+José Antônio Ferreira de Lima
+Marcus Felipe dos Santos Valente
+Nicole Riedla Paiva Neves
+Emanuelly Cantarelli Dias
 
 ## Sumário
 
