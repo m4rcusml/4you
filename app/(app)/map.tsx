@@ -7,10 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card'
 import { createClient } from '@supabase/supabase-js'
 import MapView from '@/components/general/Map'
-
-const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY!
-const supabase = createClient(supabaseUrl, supabaseAnonKey)
+import { supabase } from '@/lib/supabase'
 
 export default function Profile() {
   const [location, setLocation] = useState<Location.LocationObject | null>(null)

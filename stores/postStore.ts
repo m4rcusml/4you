@@ -1,6 +1,7 @@
 import { PostType } from '@/types/post'
 import { create } from 'zustand'
 import { supabase } from '@/lib/supabase'
+import { useAuthStore } from './authStore'
 
 interface PostState {
   posts: PostType[]
@@ -8,6 +9,7 @@ interface PostState {
   addPost: ({ content, userId }: { content: string; userId: string }) => Promise<void>
   likePost: (id: string, userId: string) => Promise<void>
   deletePost: (id: string) => Promise<void>
+  toggleLike: (postId: string) => Promise<void>
 
   isLoading: boolean
   error: string | null
@@ -111,6 +113,56 @@ export const usePostStore = create<PostState>((set, get) => ({
       set({ posts: get().posts.filter((post) => post.id !== id) })
     } catch (error: any) {
       set({ error: error.message })
+    }
+  },
+
+  toggleLike: async (postId: string) => {
+    const { posts } = get();
+    const post = posts.find((p) => p.id === postId);
+    const session = useAuthStore.getState().session;
+
+    if (!post || !session) return;
+
+    const userHasLiked = post.liked_by_user;
+    const originalLikes = post.likes;
+
+    // 1. Update Otimista: Atualiza a UI imediatamente
+    set({
+      posts: posts.map((p) =>
+        p.id === postId
+          ? {
+            ...p,
+            liked_by_user: !userHasLiked,
+            likes: userHasLiked ? p.likes - 1 : p.likes + 1,
+          }
+          : p
+      ),
+    });
+
+    try {
+      // 2. Ação no Banco de Dados
+      if (userHasLiked) {
+        // Se já curtiu, descurte (DELETE)
+        const { error } = await supabase
+          .from('users_posts')
+          .delete()
+          .match({ user_id: session.user.id, post_id: postId });
+        if (error) throw error;
+      } else {
+        // Se não curtiu, curta (INSERT)
+        const { error } = await supabase
+          .from('users_posts')
+          .insert({ user_id: session.user.id, post_id: postId });
+        if (error) throw error;
+      }
+    } catch (error) {
+      console.error('Failed to toggle like:', error);
+      // 3. Rollback: Se der erro, desfaz a alteração na UI
+      set({
+        posts: posts.map((p) =>
+          p.id === postId ? { ...p, liked_by_user: userHasLiked, likes: originalLikes } : p
+        ),
+      });
     }
   },
 
