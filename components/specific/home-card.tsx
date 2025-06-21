@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Text, View, Image } from "react-native";
+import { Typography } from "@/components/ui/typography";
 
 export function HomeCard() {
   return (
@@ -18,17 +19,17 @@ export function HomeCard() {
         }}
       />
       <CardContent className="absolute inset-0 flex flex-col justify-between p-0">
-        <Text className="mt-6 ml-6 font-semibold text-white text-lg leading-6 w-60 font-sans">
+        <Typography className="mt-6 ml-6 font-semibold text-white text-lg leading-6 w-60 font-sans">
           Maria da Penha
-        </Text>
-        <Text className="ml-6 mt-2 text-white text-xs leading-5 w-60 font-sans font-normal">
+        </Typography>
+        <Typography className="ml-6 mt-2 text-white text-xs leading-5 w-60 font-sans font-normal">
           Sua voz importa! Registre a ocorrência e comece a mudar sua história agora.
-        </Text>
+        </Typography>
         <Button
           variant="outline"
           className="w-60 h-10 ml-6 mt-2 mb-6 rounded-md font-medium bg-transparent border-2 border-primary"
         >
-          <Text className="text-white">Registrar Agora</Text>
+          <Typography className="text-white">Registrar Agora</Typography>
         </Button>
       </CardContent>
     </Card>
