@@ -18,6 +18,7 @@ export default function Profile() {
   const [institutions, setInstitutions] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [search, setSearch] = useState('') // Add search state
 
   useEffect(() => {
     (async () => {
@@ -47,6 +48,11 @@ export default function Profile() {
       })
   }, [])
 
+  // Filter institutions by nome_localidade (since that's what is rendered)
+  const filteredInstitutions = institutions.filter(item =>
+    item.nome_localidade?.toLowerCase().includes(search.toLowerCase())
+  )
+
   return (
     <ScrollView className="p-6 mb-0" style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
       <View>
@@ -54,7 +60,11 @@ export default function Profile() {
         <Typography className="text-2xm font-medium">Seu caminho, seu controle</Typography>
 
         <View className='mt-6 mb-6'>
-          <Input placeholder='Pesquisar...'></Input>
+          <Input
+            placeholder='Pesquisar...'
+            value={search}
+            onChangeText={setSearch}
+          />
         </View>
       </View>
       {Platform.OS !== 'web' && MapView ? (
@@ -88,7 +98,7 @@ export default function Profile() {
       <View className="w-full mt-4">
         {loading && <Typography>Carregando instituições...</Typography>}
         {error && <Typography className="text-red-500">{error}</Typography>}
-        {!loading && !error && institutions.map(item => (
+        {!loading && !error && filteredInstitutions.map(item => (
           <Card
             key={item.id}
             className="w-full mb-4"
