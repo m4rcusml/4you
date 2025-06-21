@@ -54,6 +54,7 @@ export function HomeCard({ photoURL, title, description, link, buttonLabel }: Pr
             {description}
           </Typography>
           <Button
+            onPress={handlePress}
             variant="outline"
             className="w-full rounded-md font-semibold bg-transparent border-2 border-muted"
           >

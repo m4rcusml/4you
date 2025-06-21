@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from 'class-variance-authority'
 import * as React from 'react'
-import { Pressable } from 'react-native'
+import { ActivityIndicator, Pressable } from 'react-native'
 import { cn } from '@/lib/utils'
 import { TextClassContext } from '@/components/ui/typography'
 
@@ -57,9 +57,10 @@ const buttonTextVariants = cva(
   }
 )
 
-type ButtonProps = React.ComponentProps<typeof Pressable> & VariantProps<typeof buttonVariants>
+type ButtonProps = React.ComponentProps<typeof Pressable> & VariantProps<typeof buttonVariants> & {
+  isLoading?: boolean}
 
-function Button({ ref, className, variant, size, ...props }: ButtonProps) {
+function Button({ ref, isLoading, children, className, variant, size, ...props }: ButtonProps) {
   return (
     <TextClassContext.Provider
       value={buttonTextVariants({ variant, size, className: 'web:pointer-events-none' })}
@@ -71,8 +72,27 @@ function Button({ ref, className, variant, size, ...props }: ButtonProps) {
         )}
         ref={ref}
         role='button'
+        disabled={props.disabled || isLoading}
         {...props}
-      />
+      >
+        {(pressableState: any) => (
+          <>
+            {isLoading ? (
+              <React.Fragment>
+                {/* Native ActivityIndicator */}
+                <ActivityIndicator
+                  size="small"
+                  color="currentColor"
+                  style={{ marginRight: 8 }}
+                />
+              </React.Fragment>
+            ) : null}
+            {typeof children === 'function'
+              ? (children as (state: any) => React.ReactNode)(pressableState)
+              : children}
+          </>
+        )}
+      </Pressable>
     </TextClassContext.Provider>
   )
 }

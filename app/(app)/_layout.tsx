@@ -18,8 +18,8 @@ export default function TabLayout() {
         header: props => <Header {...props} />,
       }}
     >
-      <Tabs.Screen name="index" />
       <Tabs.Screen name="users" />
+      <Tabs.Screen name="index" />
       <Tabs.Screen name="community" />
       <Tabs.Screen name="map" />
       <Tabs.Screen name="settings" />

@@ -60,8 +60,8 @@ export default function Home() {
       </View>
 
       <View className="flex-row gap-4 justify-between w-full">
-        <HomeItem onPress={() => router.push('/emergencial-contacts')} label="Contatos" icon={<UserGroup width={48} height={48} color="#e53888" />} />
-        <HomeItem label="Risco" icon={<ExclamationTriangle width={48} height={48} color="#e53888" />} />
+        <HomeItem onPress={() => router.push('emergencial-contacts')} label="Contatos" icon={<UserGroup width={48} height={48} color="#e53888" />} />
+        <HomeItem onPress={() => router.push('risk-form')} label="Risco" icon={<ExclamationTriangle width={48} height={48} color="#e53888" />} />
         <HomeItem onPress={() => router.push('contents/1')} label="Conteúdos" icon={<BookOpen width={48} height={48} color="#e53888" />} />
       </View>
 
