@@ -13,6 +13,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 export default function Profile() {
   const MapView = Platform.OS !== 'web' ? require('react-native-maps').default : null
+  const Marker = Platform.OS !== 'web' ? require('react-native-maps').Marker : null
   const [location, setLocation] = useState<Location.LocationObject | null>(null)
   const [permissionStatus, setPermissionStatus] = useState<'granted' | 'denied' | 'undetermined'>('undetermined')
   const [institutions, setInstitutions] = useState<any[]>([])
@@ -48,10 +49,44 @@ export default function Profile() {
       })
   }, [])
 
+  // Helper function to calculate distance between two lat/lng points (Haversine formula)
+  function getDistance(lat1: number, lon1: number, lat2: number, lon2: number) {
+    const toRad = (value: number) => (value * Math.PI) / 180
+    const R = 6371 // km
+    const dLat = toRad(lat2 - lat1)
+    const dLon = toRad(lon2 - lon1)
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(toRad(lat1)) *
+        Math.cos(toRad(lat2)) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2)
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+    return R * c
+  }
+
   // Filter institutions by nome_localidade (since that's what is rendered)
-  const filteredInstitutions = institutions.filter(item =>
+  let filteredInstitutions = institutions.filter(item =>
     item.nome_localidade?.toLowerCase().includes(search.toLowerCase())
   )
+
+  // If location is available, sort by proximity
+  if (location) {
+    filteredInstitutions = filteredInstitutions
+      .map(item => {
+        if (item.latitude && item.longitude) {
+          const distance = getDistance(
+            location.coords.latitude,
+            location.coords.longitude,
+            parseFloat(item.latitude),
+            parseFloat(item.longitude)
+          )
+          return { ...item, _distance: distance }
+        }
+        return { ...item, _distance: Infinity }
+      })
+      .sort((a, b) => a._distance - b._distance)
+  }
 
   return (
     <ScrollView className="p-6 mb-0" style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
@@ -78,7 +113,46 @@ export default function Profile() {
               longitudeDelta: 0.0421,
             }}
             showsUserLocation={true}
-          />
+          >
+            {/* Render a marker for each institution */}
+            {filteredInstitutions.map(item =>
+              item.latitude && item.longitude ? (
+                <Marker
+                  key={item.id}
+                  coordinate={{
+                    latitude: parseFloat(item.latitude),
+                    longitude: parseFloat(item.longitude),
+                  }}
+                  title={item.nome_localidade}
+                  description={item.endereco_completo}
+                >
+                  {/* Custom pin styled with your primary color */}
+                  <View
+                    style={{
+                      backgroundColor: '#e53888', // matches --primary from global.css
+                      padding: 6,
+                      borderRadius: 16,
+                      borderWidth: 2,
+                      borderColor: '#fff',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <View
+                      style={{
+                        width: 16,
+                        height: 16,
+                        borderRadius: 8,
+                        backgroundColor: '#e53888',
+                        borderWidth: 2,
+                        borderColor: '#fff',
+                      }}
+                    />
+                  </View>
+                </Marker>
+              ) : null
+            )}
+          </MapView>
         </View>
       ) : (
         <View style={[styles.mapContainer, { alignItems: 'center', justifyContent: 'center', backgroundColor: '#eee' }]}>
