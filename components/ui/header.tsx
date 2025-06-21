@@ -5,13 +5,10 @@ import { colorScheme, useColorScheme } from 'nativewind'
 import { Typography } from './typography'
 import { Link, router } from 'expo-router'
 
-import type { BottomTabNavigationOptions, BottomTabNavigationProp } from '@react-navigation/bottom-tabs'
-import type { RouteProp, ParamListBase } from '@react-navigation/native'
-
 type Props = {
-  options: BottomTabNavigationOptions
-  route: RouteProp<ParamListBase>
-  navigation: BottomTabNavigationProp<ParamListBase, string, undefined>
+  options: any
+  route: any
+  navigation: any
 }
 
 const cantGoBackRoutes = ['index', 'users', 'community', 'map', 'settings']
