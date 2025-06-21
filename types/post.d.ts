@@ -6,4 +6,5 @@ export type PostType = {
   likes: number
   comments: number
   created_at: string
+  liked_by_user: boolean
 }

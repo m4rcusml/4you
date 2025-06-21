@@ -14,7 +14,6 @@ export default function Page() {
   const [content, setContent] = useState('')
 
   async function handlePost() {
-    console.log("Botão 'Enviar' pressionado. Iniciando handlePost...");
 
     if (isLoading || !content.trim()) return;
     if (!user) {
@@ -45,15 +44,17 @@ export default function Page() {
           </Typography>
         </View>
 
-        <Textarea placeholder="Digite aqui" />
+        <Textarea placeholder="Digite aqui" value={content} onChangeText={setContent} />
 
         <View className="gap-2">
           <Button onPress={handlePost}>
             <Typography className="text-primary-foreground font-medium">Postar</Typography>
           </Button>
-          <Button variant="outline">
-            <Typography>Cancelar</Typography>
-          </Button>
+          <Link href={'/'} asChild>
+            <Button variant="outline">
+              <Typography>Cancelar</Typography>
+            </Button>
+          </Link>
         </View>
       </Animated.View>
     </Animated.View>

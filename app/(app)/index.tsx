@@ -14,7 +14,7 @@ export default function Page() {
     fetchPosts()
   }, [])
 
-  if (isLoading) return <Typography className="text-lg font-semibold text-ring text-center">Carregando...</Typography>
+  if (isLoading && !posts) return <Typography className="text-lg font-semibold text-ring text-center">Carregando...</Typography>
   if (error) return <Typography className="text-lg font-semibold text-ring text-center">Ocorreu um erro ao carregar os posts</Typography>
 
   return (
