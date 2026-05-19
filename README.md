@@ -54,7 +54,7 @@ Por fim, a proposta promove o empoderamento feminino, com ferramentas de autoava
 
 <sup>Figura 1: Forças de Porter.</sup><br>
 
-<img src="../assets/5-forcas-de-porter.png"><br>
+<img src="/assets/5-forcas-de-porter.png"><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -78,7 +78,7 @@ Por fim, a proposta promove o empoderamento feminino, com ferramentas de autoava
 
 <sup>Figura 2: Analise Swot.</sup><br>
 
-<img src="../assets/swot-analise.png"><br>
+<img src="/assets/swot-analise.png"><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -113,7 +113,7 @@ O Canvas da Proposta de Valor da aplicação foi desenvolvido para alinhar profu
 
 <sup>Figura 3: Canvas Proposta de Valor .</sup><br>
 
-<img src="../assets/canvas-proposta-valor.png"><br>
+<img src="/assets/canvas-proposta-valor.png"><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -133,13 +133,13 @@ A seguir, são apresentadas as duas principais personas identificadas para a apl
 
 
 
-![Persona 1](../assets/persona-Priscila.png)
+![Persona 1](/assets/persona-Priscila.png)
 
 Priscila é uma mulher de 32 anos, residente em área urbana do Distrito Federal, que já vivenciou situações de risco e busca maior autonomia e segurança em seu dia a dia. Ela valoriza privacidade, agilidade no atendimento e acesso fácil a canais de denúncia e suporte emocional. Priscila utiliza frequentemente o smartphone para se informar e se conectar com redes de apoio.
 
 
 
-![Persona 2](../assets/persona-mariana.png)
+![Persona 2](/assets/persona-mariana.png)
 
 Mariana tem 24 anos, é estudante universitária e participa de grupos de apoio e projetos sociais voltados à proteção de mulheres. Ela busca informações confiáveis sobre direitos, deseja compartilhar experiências e contribuir para o empoderamento coletivo. Mariana valoriza soluções intuitivas, seguras e integradas à rede pública.
 
@@ -166,7 +166,7 @@ Cada cor da paleta cumpre uma função específica — seja decorativa, informat
 
 <sup>Figura x: Cores.</sup><br>
 
-<img src="../assets/Colors.png" />
+<img src="/assets/Colors.png" />
 
 <br>
 
@@ -188,7 +188,7 @@ Além disso, a escolha tipográfica respeita os princípios de acessibilidade, g
 
 <sup>Figura x: Tipografia.</sup><br>
 
-<img src="../assets/Typography.png" /><br>
+<img src="/assets/Typography.png" /><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -208,7 +208,7 @@ A seguir estão as telas prototipadas, que ilustram as principais funcionalidade
 
 <sup>Figura x: Telas de Introdução.</sup><br>
 
-<img src="../assets/prototype/introduction.png" /><br>
+<img src="/assets/prototype/introduction.png" /><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -220,7 +220,7 @@ As telas de introdução têm como objetivo apresentar o propósito da aplicaç�
 
 <sup>Figura x: Telas de Login e Cadastro.</sup><br>
 
-<img src="../assets/prototype/login&cadastro.png" /><br>
+<img src="/assets/prototype/login&cadastro.png" /><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -232,7 +232,7 @@ As telas de login e cadastro são projetadas para serem intuitivas e seguras, pe
 
 <sup>Figura x: Tela Home.</sup><br>
 
-<img src="../assets/prototype/home.png" /><br>
+<img src="/assets/prototype/home.png" /><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -244,7 +244,7 @@ A tela inicial (Home) funciona como o painel principal da aplicação, permitind
 
 <sup>Figura x: Tela do Mapa.</sup><br>
 
-<img src="../assets/prototype/map.png" /><br>
+<img src="/assets/prototype/map.png" /><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -256,7 +256,7 @@ O mapa interativo utiliza geolocalização para exibir pontos da rede de apoio d
 
 <sup>Figura x: Tela de Contatos e Comunidade.</sup><br>
 
-<img src="../assets/prototype/contacts&comunidade.png" /><br>
+<img src="/assets/prototype/contacts&comunidade.png" /><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -268,7 +268,7 @@ As telas apresentadas na figura x promovem a construção de uma rede de apoio. 
 
 <sup>Figura x: Telas de formulários.</sup><br>
 
-<img src="../assets/prototype/forms.png" /><br>
+<img src="/assets/prototype/forms.png" /><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -280,7 +280,7 @@ As telas de formulários são utilizados para avaliar situações de risco e col
 
 <sup>Figura x: Telas de conteúdos e chat.</sup><br>
 
-<img src="../assets/prototype/conteudos&chat.png" /><br>
+<img src="/assets/prototype/conteudos&chat.png" /><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
@@ -292,7 +292,7 @@ A tela de conteúdos oferece acesso a conteúdos educativos sobre violência de 
 
 <sup>Figura x: Telas de perfil e configurações.</sup><br>
 
-<img src="../assets/prototype/perfil&settings.png" /><br>
+<img src="/assets/prototype/perfil&settings.png" /><br>
 
 <sub>Fonte: Material produzido pelos autores (2025).</sub><br>
 
