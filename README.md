@@ -22,10 +22,6 @@ Emanuelly Cantarelli Dias
 
 [5. Conclusões e trabalhos futuros](#c7)
 
-[6. Referências](c#8)
-
-[Anexos](#c9)
-
 <br>
 
 
@@ -372,11 +368,3 @@ Entre os pontos a melhorar, foram identificados: a necessidade de engajamento co
 Para cada ponto de melhoria, foram traçados planos de ação: implementar gamificação e campanhas de incentivo ao engajamento; estabelecer parcerias formais e desenvolver APIs para integração com órgãos públicos; ampliar o suporte psicológico humano por meio de voluntárias e profissionais; desenvolver interfaces simplificadas e tutoriais em áudio; otimizar o consumo de recursos para dispositivos de entrada; criar sistema inteligente de notificações personalizadas; e realizar auditorias e testes regulares de segurança.
 
 Outras ideias para melhorias futuras incluem: reconhecimento facial para autenticação e identificação de agressores, uso de realidade aumentada para rotas seguras, integração com wearables, ampliação da comunidade virtual, parcerias para oportunidades de emprego, integração com assistentes virtuais, análise avançada de dados para políticas públicas, capacitação em segurança digital, suporte a outros grupos vulneráveis e implementação de feedbacks visuais gamificados.
-
-# <a name="c8"></a>6. Referências (sprints 1 a 5)
-
-_Incluir as principais referências de seu projeto, para que seu parceiro possa consultar caso ele se interessar em aprofundar. Um exemplo de referência de livro e de site:_<br>
-
-# <a name="c9"></a>Anexos
-
-*Inclua aqui quaisquer complementos para seu projeto, como diagramas, imagens, tabelas etc. Organize em sub-tópicos utilizando headings menores (use ## ou ### para isso)*
